@@ -62,6 +62,11 @@ const hozanjiLocation: LocalizedString = {
   en: "Hozan-ji, Nara",
 };
 
+const arashiyamaLocation: LocalizedString = {
+  ja: "嵐山（京都）",
+  en: "Arashiyama, Kyoto",
+};
+
 /** Primary visible set — stills from walks / location shoots */
 export const photos: MediaItem[] = [
   {
@@ -827,6 +832,54 @@ export const photos: MediaItem[] = [
     location: hozanjiLocation,
     mediaType: "photo",
     src: "/photos/stock-l1003201.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-do01030969",
+    title: { ja: "夕暮れの川", en: "River at dusk" },
+    category: "風景・花",
+    location: arashiyamaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-do01030969.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2305,
+    height: 1537,
+  },
+  {
+    id: "stock-do01030970",
+    title: { ja: "橋の上の夕陽", en: "Sunset from the bridge" },
+    category: "風景・花",
+    location: arashiyamaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-do01030970.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2305,
+    height: 1537,
+  },
+  {
+    id: "stock-l1004133",
+    title: { ja: "渡月橋の夕暮れ", en: "Togetsukyo at dusk" },
+    category: "風景・花",
+    location: arashiyamaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-l1004133.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-l1004146",
+    title: { ja: "川と山の夕景", en: "River and mountains at dusk" },
+    category: "風景・花",
+    location: arashiyamaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-l1004146.jpg",
     credit: "Japanphoto-lab",
     creditUrl: "/",
     width: 2304,
