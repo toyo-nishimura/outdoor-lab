@@ -16,11 +16,10 @@ import { useI18n } from "@/lib/i18n";
 type Filter = PhotoCategory | "すべて";
 
 const categoryThumbs: Record<PhotoCategory, string> = {
-  キャンプ: "/photos/katsuoji-b0005003.jpg",
-  山: "/photos/river-dawn.jpg",
-  水辺: "/photos/sunset-bay.jpg",
-  森: "/photos/river-mist.jpg",
-  街歩き: "/photos/katsuoji-b0005016.jpg",
+  "街・路地裏": "/photos/stock-cb00bb30-2df1-4661-a934-9e425e4360c9.jpg",
+  "寺社仏閣": "/photos/katsuoji-b0005016.jpg",
+  "風景・花": "/photos/stock-c9a833fd-1d69-4615-88c3-84620c952045.jpg",
+  "アウトドア": "/photos/river-dawn.jpg",
 };
 
 export function HomeGallery() {

@@ -1,9 +1,8 @@
 export type PhotoCategory =
-  | "キャンプ"
-  | "山"
-  | "水辺"
-  | "森"
-  | "街歩き";
+  | "街・路地裏"
+  | "寺社仏閣"
+  | "風景・花"
+  | "アウトドア";
 
 export type Locale = "ja" | "en";
 
@@ -35,19 +34,17 @@ export type MediaItem = {
 export type Photo = MediaItem;
 
 export const categories: PhotoCategory[] = [
-  "キャンプ",
-  "山",
-  "水辺",
-  "森",
-  "街歩き",
+  "街・路地裏",
+  "寺社仏閣",
+  "風景・花",
+  "アウトドア",
 ];
 
 export const categoryLabels: Record<PhotoCategory, LocalizedString> = {
-  キャンプ: { ja: "キャンプ", en: "Camping" },
-  山: { ja: "山", en: "Mountains" },
-  水辺: { ja: "水辺", en: "Water" },
-  森: { ja: "森", en: "Forest" },
-  街歩き: { ja: "街歩き", en: "City walks" },
+  "街・路地裏": { ja: "街・路地裏", en: "Streets & alleys" },
+  "寺社仏閣": { ja: "寺社仏閣", en: "Temples & shrines" },
+  "風景・花": { ja: "風景・花", en: "Scenery & flowers" },
+  "アウトドア": { ja: "アウトドア", en: "Outdoor" },
 };
 
 const katsuojiLocation: LocalizedString = {
@@ -60,7 +57,7 @@ export const photos: MediaItem[] = [
   {
     id: "sunset-bay",
     title: { ja: "夕暮れの入り江", en: "Sunset inlet" },
-    category: "水辺",
+    category: "風景・花",
     location: { ja: "海岸", en: "Coast" },
     mediaType: "photo",
     src: "/photos/sunset-bay.jpg",
@@ -72,7 +69,7 @@ export const photos: MediaItem[] = [
   {
     id: "river-dawn",
     title: { ja: "川の夜明け", en: "River at dawn" },
-    category: "山",
+    category: "アウトドア",
     location: { ja: "河畔", en: "Riverside" },
     mediaType: "photo",
     src: "/photos/river-dawn.jpg",
@@ -84,7 +81,7 @@ export const photos: MediaItem[] = [
   {
     id: "river-mist",
     title: { ja: "朝靄の川辺", en: "Misty riverside" },
-    category: "森",
+    category: "風景・花",
     location: { ja: "河畔", en: "Riverside" },
     mediaType: "photo",
     src: "/photos/river-mist.jpg",
@@ -96,7 +93,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005003",
     title: { ja: "勝尾寺のだるま", en: "Daruma at Katsuo-ji" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005003.jpg",
@@ -108,7 +105,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005007",
     title: { ja: "格子のだるま", en: "Daruma in the lattice" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005007.jpg",
@@ -120,7 +117,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005016",
     title: { ja: "勝だるまの群れ", en: "Crowd of winning daruma" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005016.jpg",
@@ -132,7 +129,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005019",
     title: { ja: "勝尾寺・だるまの塔", en: "Daruma tower at Katsuo-ji" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005019.jpg",
@@ -144,7 +141,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005022",
     title: { ja: "木の股のだるま", en: "Daruma in a tree fork" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005022.jpg",
@@ -156,7 +153,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005025",
     title: { ja: "棚のだるま", en: "Daruma on the ledge" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005025.jpg",
@@ -168,7 +165,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005049",
     title: { ja: "樹皮に勝だるま", en: "Daruma in the bark" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005049.jpg",
@@ -180,7 +177,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005063",
     title: { ja: "枝のだるま列", en: "Daruma along a branch" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005063.jpg",
@@ -192,7 +189,7 @@ export const photos: MediaItem[] = [
   {
     id: "katsuoji-b0005072",
     title: { ja: "格子に並ぶだるま", en: "Daruma filling the lattice" },
-    category: "街歩き",
+    category: "寺社仏閣",
     location: katsuojiLocation,
     mediaType: "photo",
     src: "/photos/katsuoji-b0005072.jpg",
@@ -203,9 +200,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-06bda290-e272-4ffc-b42d-21d64b2ab342",
-    title: { ja: "日本の風景 01", en: "Japan scenery 01" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "通りの向こうの東京タワー", en: "Tokyo Tower down the street" },
+    category: "街・路地裏",
+    location: { ja: "東京", en: "Tokyo" },
     mediaType: "photo",
     src: "/photos/stock-06bda290-e272-4ffc-b42d-21d64b2ab342.jpg",
     credit: "Japanphoto-lab",
@@ -215,9 +212,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-1b666b08-46ce-48d2-9ca1-01f2e6321354",
-    title: { ja: "日本の風景 02", en: "Japan scenery 02" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "石舞台古墳", en: "Ishibutai Kofun" },
+    category: "風景・花",
+    location: { ja: "飛鳥（奈良）", en: "Asuka, Nara" },
     mediaType: "photo",
     src: "/photos/stock-1b666b08-46ce-48d2-9ca1-01f2e6321354.jpg",
     credit: "Japanphoto-lab",
@@ -227,8 +224,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-21591f3d-6d5a-4ab0-862b-29a6788a2f95",
-    title: { ja: "日本の風景 03", en: "Japan scenery 03" },
-    category: "街歩き",
+    title: { ja: "紅葉", en: "Autumn maple leaves" },
+    category: "風景・花",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-21591f3d-6d5a-4ab0-862b-29a6788a2f95.jpg",
@@ -239,9 +236,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-22377bb6-10d8-4bac-8926-41daeb246559",
-    title: { ja: "日本の風景 04", en: "Japan scenery 04" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "千本鳥居", en: "Senbon Torii, Kyoto" },
+    category: "寺社仏閣",
+    location: { ja: "京都", en: "Kyoto" },
     mediaType: "photo",
     src: "/photos/stock-22377bb6-10d8-4bac-8926-41daeb246559.jpg",
     credit: "Japanphoto-lab",
@@ -251,8 +248,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-628e9340-b29e-4744-98ce-3a7c7d299a3e",
-    title: { ja: "日本の風景 05", en: "Japan scenery 05" },
-    category: "街歩き",
+    title: { ja: "彼岸花の野", en: "Spider lily field" },
+    category: "風景・花",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-628e9340-b29e-4744-98ce-3a7c7d299a3e.jpg",
@@ -263,8 +260,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-6597f423-65f7-4b34-9558-73be6b35d1df",
-    title: { ja: "日本の風景 06", en: "Japan scenery 06" },
-    category: "街歩き",
+    title: { ja: "竹林", en: "Bamboo grove" },
+    category: "風景・花",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-6597f423-65f7-4b34-9558-73be6b35d1df.jpg",
@@ -275,9 +272,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-8ec20ff1-249c-4d95-a586-7a51a9d1d7e2",
-    title: { ja: "日本の風景 07", en: "Japan scenery 07" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "東京の夜景", en: "Tokyo night skyline" },
+    category: "街・路地裏",
+    location: { ja: "東京", en: "Tokyo" },
     mediaType: "photo",
     src: "/photos/stock-8ec20ff1-249c-4d95-a586-7a51a9d1d7e2.jpg",
     credit: "Japanphoto-lab",
@@ -287,8 +284,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-a1fef6a3-a146-4ea3-a144-271ee3d13cb0",
-    title: { ja: "日本の風景 08", en: "Japan scenery 08" },
-    category: "街歩き",
+    title: { ja: "彼岸花", en: "Spider lilies" },
+    category: "風景・花",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-a1fef6a3-a146-4ea3-a144-271ee3d13cb0.jpg",
@@ -299,8 +296,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-aa0a0dd6-fc96-44bf-8640-292d48c04960",
-    title: { ja: "日本の風景 09", en: "Japan scenery 09" },
-    category: "街歩き",
+    title: { ja: "夜の路地", en: "Night alley" },
+    category: "街・路地裏",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-aa0a0dd6-fc96-44bf-8640-292d48c04960.jpg",
@@ -311,9 +308,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-b00032403fr1759376416",
-    title: { ja: "日本の風景 10", en: "Japan scenery 10" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "通天閣", en: "Tsutenkaku" },
+    category: "街・路地裏",
+    location: { ja: "大阪・通天閣", en: "Tsutenkaku, Osaka" },
     mediaType: "photo",
     src: "/photos/stock-b00032403fr1759376416.jpg",
     credit: "Japanphoto-lab",
@@ -323,8 +320,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-b00032853fr1759400456",
-    title: { ja: "日本の風景 11", en: "Japan scenery 11" },
-    category: "街歩き",
+    title: { ja: "地下のホーム", en: "Underground platform" },
+    category: "街・路地裏",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-b00032853fr1759400456.jpg",
@@ -335,9 +332,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-b1e5597b-d7e6-44ad-a831-55da4962c8a8",
-    title: { ja: "日本の風景 12", en: "Japan scenery 12" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "京都の鳥居の道", en: "Torii path, Kyoto" },
+    category: "寺社仏閣",
+    location: { ja: "京都", en: "Kyoto" },
     mediaType: "photo",
     src: "/photos/stock-b1e5597b-d7e6-44ad-a831-55da4962c8a8.jpg",
     credit: "Japanphoto-lab",
@@ -347,9 +344,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-b61991e4-da1a-451b-a07c-733a80de0fb3",
-    title: { ja: "日本の風景 13", en: "Japan scenery 13" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "窓越しの東京タワー", en: "Tokyo Tower through the glass" },
+    category: "街・路地裏",
+    location: { ja: "東京", en: "Tokyo" },
     mediaType: "photo",
     src: "/photos/stock-b61991e4-da1a-451b-a07c-733a80de0fb3.jpg",
     credit: "Japanphoto-lab",
@@ -359,9 +356,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-b8cfd952-ac20-4995-936c-cb0f0d04f154",
-    title: { ja: "日本の風景 14", en: "Japan scenery 14" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "森の鳥居", en: "Torii in the woods" },
+    category: "寺社仏閣",
+    location: { ja: "京都", en: "Kyoto" },
     mediaType: "photo",
     src: "/photos/stock-b8cfd952-ac20-4995-936c-cb0f0d04f154.jpg",
     credit: "Japanphoto-lab",
@@ -371,9 +368,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-c9a833fd-1d69-4615-88c3-84620c952045",
-    title: { ja: "日本の風景 15", en: "Japan scenery 15" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "奈良公園の鹿", en: "Deer in Nara Park" },
+    category: "風景・花",
+    location: { ja: "奈良公園", en: "Nara Park" },
     mediaType: "photo",
     src: "/photos/stock-c9a833fd-1d69-4615-88c3-84620c952045.jpg",
     credit: "Japanphoto-lab",
@@ -383,9 +380,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-cb00bb30-2df1-4661-a934-9e425e4360c9",
-    title: { ja: "日本の風景 16", en: "Japan scenery 16" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "東京タワー", en: "Tokyo Tower" },
+    category: "街・路地裏",
+    location: { ja: "東京", en: "Tokyo" },
     mediaType: "photo",
     src: "/photos/stock-cb00bb30-2df1-4661-a934-9e425e4360c9.jpg",
     credit: "Japanphoto-lab",
@@ -395,9 +392,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-d35c061e-75e9-413f-8e76-c41f15eb5b6b",
-    title: { ja: "日本の風景 17", en: "Japan scenery 17" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "築地の路地", en: "Tsukiji alley" },
+    category: "街・路地裏",
+    location: { ja: "築地", en: "Tsukiji" },
     mediaType: "photo",
     src: "/photos/stock-d35c061e-75e9-413f-8e76-c41f15eb5b6b.jpg",
     credit: "Japanphoto-lab",
@@ -407,9 +404,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-d9071cbf-613f-491e-b7ca-aa17053da4dc",
-    title: { ja: "日本の風景 18", en: "Japan scenery 18" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "狐の像と鳥居", en: "Kitsune and torii" },
+    category: "寺社仏閣",
+    location: { ja: "京都", en: "Kyoto" },
     mediaType: "photo",
     src: "/photos/stock-d9071cbf-613f-491e-b7ca-aa17053da4dc.jpg",
     credit: "Japanphoto-lab",
@@ -419,9 +416,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-e85a6f26-a74b-4f3d-9fe6-a9a3707ed41b",
-    title: { ja: "日本の風景 19", en: "Japan scenery 19" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "夕暮れのスカイライン", en: "Sunset skyline" },
+    category: "街・路地裏",
+    location: { ja: "東京", en: "Tokyo" },
     mediaType: "photo",
     src: "/photos/stock-e85a6f26-a74b-4f3d-9fe6-a9a3707ed41b.jpg",
     credit: "Japanphoto-lab",
@@ -431,8 +428,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-ee109edd-e0c9-4b6d-b0ee-77fb722620d6",
-    title: { ja: "日本の風景 20", en: "Japan scenery 20" },
-    category: "街歩き",
+    title: { ja: "彼岸花の花", en: "Spider lily bloom" },
+    category: "風景・花",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-ee109edd-e0c9-4b6d-b0ee-77fb722620d6.jpg",
@@ -443,9 +440,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-0278",
-    title: { ja: "日本の風景 21", en: "Japan scenery 21" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "川辺の鹿", en: "Deer by the stream" },
+    category: "風景・花",
+    location: { ja: "奈良公園", en: "Nara Park" },
     mediaType: "photo",
     src: "/photos/stock-img-0278.jpg",
     credit: "Japanphoto-lab",
@@ -455,9 +452,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-0279",
-    title: { ja: "日本の風景 22", en: "Japan scenery 22" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "渓流の鹿", en: "Deer in the creek" },
+    category: "風景・花",
+    location: { ja: "奈良公園", en: "Nara Park" },
     mediaType: "photo",
     src: "/photos/stock-img-0279.jpg",
     credit: "Japanphoto-lab",
@@ -467,9 +464,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-7930",
-    title: { ja: "日本の風景 23", en: "Japan scenery 23" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "大阪の商店街", en: "Osaka shopping alley" },
+    category: "街・路地裏",
+    location: { ja: "大阪", en: "Osaka" },
     mediaType: "photo",
     src: "/photos/stock-img-7930.jpg",
     credit: "Japanphoto-lab",
@@ -479,9 +476,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-7948",
-    title: { ja: "日本の風景 24", en: "Japan scenery 24" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "橋の下の鹿", en: "Deer under the bridge" },
+    category: "風景・花",
+    location: { ja: "奈良公園", en: "Nara Park" },
     mediaType: "photo",
     src: "/photos/stock-img-7948.jpg",
     credit: "Japanphoto-lab",
@@ -491,9 +488,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-7949",
-    title: { ja: "日本の風景 25", en: "Japan scenery 25" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "宮島の入り江", en: "Miyajima bay" },
+    category: "風景・花",
+    location: { ja: "宮島", en: "Miyajima" },
     mediaType: "photo",
     src: "/photos/stock-img-7949.jpg",
     credit: "Japanphoto-lab",
@@ -503,9 +500,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-7950",
-    title: { ja: "日本の風景 26", en: "Japan scenery 26" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "宮島の石段", en: "Stone steps, Miyajima" },
+    category: "寺社仏閣",
+    location: { ja: "宮島", en: "Miyajima" },
     mediaType: "photo",
     src: "/photos/stock-img-7950.jpg",
     credit: "Japanphoto-lab",
@@ -515,9 +512,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-7956",
-    title: { ja: "日本の風景 27", en: "Japan scenery 27" },
-    category: "街歩き",
-    location: { ja: "日本", en: "Japan" },
+    title: { ja: "宮島の大鳥居", en: "Great Torii, Miyajima" },
+    category: "寺社仏閣",
+    location: { ja: "宮島", en: "Miyajima" },
     mediaType: "photo",
     src: "/photos/stock-img-7956.jpg",
     credit: "Japanphoto-lab",
@@ -527,8 +524,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-img-7971",
-    title: { ja: "日本の風景 28", en: "Japan scenery 28" },
-    category: "街歩き",
+    title: { ja: "砂丘のパラグライダー", en: "Paraglider over dunes" },
+    category: "アウトドア",
     location: { ja: "日本", en: "Japan" },
     mediaType: "photo",
     src: "/photos/stock-img-7971.jpg",
