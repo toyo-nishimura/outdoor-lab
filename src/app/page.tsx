@@ -1,4 +1,3 @@
-import { Hero } from "@/components/Hero";
 import { Inquiry } from "@/components/Inquiry";
 import { PhotoGrid } from "@/components/PhotoGrid";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -9,7 +8,6 @@ export default function Home() {
     <>
       <SiteHeader />
       <main>
-        <Hero />
         <PhotoGrid />
         <Inquiry />
       </main>
