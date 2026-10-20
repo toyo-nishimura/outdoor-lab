@@ -92,17 +92,18 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
               >
                 {t("navTerms")}
               </Link>
-              <a
-                href={site.inquiryFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-fog px-5 py-3 text-sm font-semibold text-moss transition hover:border-sage hover:text-pine"
-              >
-                {t("consultPhoto")}
-              </a>
             </div>
           </div>
         </article>
+
+        <div className="mx-auto mt-12 max-w-5xl border-t border-fog/80 pt-10">
+          <Link
+            href="/#gallery"
+            className="inline-flex items-center justify-center rounded-[8px] border border-ink px-5 py-3 text-sm font-semibold text-ink transition hover:bg-chip"
+          >
+            {t("backToGallery")}
+          </Link>
+        </div>
       </main>
       <SiteFooter />
     </>

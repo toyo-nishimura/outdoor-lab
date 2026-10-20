@@ -89,6 +89,7 @@ const ja: Dict = {
     "撮影・制作のご相談はホームの「撮影依頼・ご相談」からどうぞ。",
   termsInquiryCta: "撮影依頼・ご相談へ",
   backToGrid: "グリッドへ戻る",
+  backToGallery: "一覧に戻る",
   openMedia: "素材を開く",
   playExternal: "外部で再生",
   photoLabel: "写真",
@@ -97,7 +98,6 @@ const ja: Dict = {
   detailBodyVideo:
     " 動画は外部ホストで公開し、ここでは埋め込み／リンクのみ想定しています。",
   creditLabel: "クレジット：",
-  consultPhoto: "この素材について相談",
 };
 
 const en: Dict = {
@@ -172,6 +172,7 @@ const en: Dict = {
   termsInquiryHint: "For shoot or production inquiries, use Commission inquiry.",
   termsInquiryCta: "Commission inquiry",
   backToGrid: "Back to grid",
+  backToGallery: "Back to gallery",
   openMedia: "Open file",
   playExternal: "Play externally",
   photoLabel: "Photo",
@@ -180,7 +181,6 @@ const en: Dict = {
   detailBodyVideo:
     " Videos are hosted externally; this page only links or embeds.",
   creditLabel: "Credit: ",
-  consultPhoto: "Ask about this photo",
 };
 
 const dictionaries: Record<Locale, Dict> = { ja, en };
