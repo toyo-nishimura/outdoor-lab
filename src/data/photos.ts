@@ -67,6 +67,11 @@ const arashiyamaLocation: LocalizedString = {
   en: "Arashiyama, Kyoto",
 };
 
+const nanzenjiLocation: LocalizedString = {
+  ja: "南禅寺（京都）",
+  en: "Nanzen-ji, Kyoto",
+};
+
 /** Primary visible set — stills from walks / location shoots */
 export const photos: MediaItem[] = [
   {
@@ -880,6 +885,42 @@ export const photos: MediaItem[] = [
     location: arashiyamaLocation,
     mediaType: "photo",
     src: "/photos/stock-l1004146.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-l1004938",
+    title: { ja: "水路閣のアーチ", en: "Aqueduct arches" },
+    category: "寺社仏閣",
+    location: nanzenjiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-l1004938.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 1537,
+    height: 2305,
+  },
+  {
+    id: "stock-l1004944",
+    title: { ja: "水路閣と緑", en: "Aqueduct and greenery" },
+    category: "寺社仏閣",
+    location: nanzenjiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-l1004944.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-l1004954",
+    title: { ja: "参道の門", en: "Gate on the approach" },
+    category: "寺社仏閣",
+    location: nanzenjiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-l1004954.jpg",
     credit: "Japanphoto-lab",
     creditUrl: "/",
     width: 2304,
