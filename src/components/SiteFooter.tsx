@@ -13,17 +13,14 @@ export function SiteFooter() {
             className="flex flex-wrap items-center gap-x-5 gap-y-2"
           >
             <Link href="/#gallery" className="leading-none hover:text-pine">
-              素材
+              写真一覧
             </Link>
             <Link href="/terms" className="leading-none hover:text-pine">
               利用条件
             </Link>
-            <a
-              href="mailto:hello@outdoor-lab.example?subject=撮影の相談"
-              className="leading-none hover:text-pine"
-            >
-              相談
-            </a>
+            <Link href="/#contact" className="leading-none hover:text-pine">
+              撮影依頼・ご相談
+            </Link>
           </nav>
         </div>
         <p className="text-sage md:shrink-0 md:text-right">

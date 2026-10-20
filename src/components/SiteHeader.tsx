@@ -12,17 +12,14 @@ export function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-3 text-sm font-medium text-moss sm:gap-4">
           <Link href="/#gallery" className="hover:text-pine">
-            素材
+            写真一覧
           </Link>
           <Link href="/terms" className="hover:text-pine">
             利用条件
           </Link>
-          <a
-            href="mailto:hello@outdoor-lab.example?subject=撮影の相談"
-            className="hover:text-pine"
-          >
-            相談
-          </a>
+          <Link href="/#contact" className="hover:text-pine">
+            撮影依頼・ご相談
+          </Link>
         </nav>
       </div>
     </header>

@@ -22,7 +22,7 @@ export function PhotoGrid() {
       <div className="border-b border-fog/80 px-4 py-1.5 sm:px-[30px]">
         <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <p className="text-xs leading-snug text-moss sm:text-[13px]">
-            アウトドアの空気を、そのまま使える素材棚。キャンプ・山・水辺・森。
+            自然の息吹を、そのまま手元に。アウトドアに特化したフリー写真素材。
           </p>
           <div className="flex flex-wrap gap-1">
             {filters.map((item) => {
