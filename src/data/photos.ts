@@ -52,6 +52,11 @@ const katsuojiLocation: LocalizedString = {
   en: "Katsuo-ji, Minoh",
 };
 
+const expoOsakaLocation: LocalizedString = {
+  ja: "大阪・万博記念公園（万博跡地）",
+  en: "Expo '70 Commemorative Park, Osaka",
+};
+
 /** Primary visible set — stills from walks / location shoots */
 export const photos: MediaItem[] = [
   {
@@ -604,6 +609,66 @@ export const photos: MediaItem[] = [
     credit: "Japanphoto-lab",
     creditUrl: "/",
     width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-597a86b5-880e-4fda-a4c5-2a34ce155e62",
+    title: { ja: "跡地の車道", en: "Road on the grounds" },
+    category: "街・路地裏",
+    location: expoOsakaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-597a86b5-880e-4fda-a4c5-2a34ce155e62.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2048,
+    height: 1536,
+  },
+  {
+    id: "stock-9e2a4795-4d07-4a0d-9ad3-9eaf409ee199",
+    title: { ja: "夕暮れの港", en: "Harbor at dusk" },
+    category: "風景・花",
+    location: expoOsakaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-9e2a4795-4d07-4a0d-9ad3-9eaf409ee199.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2048,
+    height: 1536,
+  },
+  {
+    id: "stock-a9482216-a00f-424a-8599-4429835287e6",
+    title: { ja: "会場脇の道路", en: "Road beside the grounds" },
+    category: "街・路地裏",
+    location: expoOsakaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-a9482216-a00f-424a-8599-4429835287e6.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2048,
+    height: 1536,
+  },
+  {
+    id: "stock-c1e32d83-8869-4a54-8877-45f5aed8a5ee",
+    title: { ja: "まっすぐな車道", en: "Straight roadway" },
+    category: "街・路地裏",
+    location: expoOsakaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-c1e32d83-8869-4a54-8877-45f5aed8a5ee.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2048,
+    height: 1536,
+  },
+  {
+    id: "stock-d6abebe0-6550-44d4-ac19-9a4a54909a23",
+    title: { ja: "橋と港の夕景", en: "Bridge and harbor at dusk" },
+    category: "風景・花",
+    location: expoOsakaLocation,
+    mediaType: "photo",
+    src: "/photos/stock-d6abebe0-6550-44d4-ac19-9a4a54909a23.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2048,
     height: 1536,
   },
 ];
