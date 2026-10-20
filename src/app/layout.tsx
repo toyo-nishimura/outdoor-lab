@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, League_Spartan, Noto_Sans_JP } from "next/font/google";
+import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 /** Same stack as eye-see-design: Archivo + League Spartan + Noto Sans JP */
@@ -22,9 +23,9 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "outdoor-lab | Photo Stock & Visual Practice",
+  title: "Japanphoto-lab | Photo Stock & Visual Practice",
   description:
-    "キャンプやアウトドアをはじめ、ロケハンやフォトウォークで切り取った景色のストック。記事・デザイン制作に使えるフリー写真と、撮影・ビジュアル制作の相談。",
+    "Free photos from camping, outdoor days, location scouts, and photo walks across Japan. Commissions for shoots and visual production.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -33,7 +34,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="ja"
       className={`${archivo.variable} ${leagueSpartan.variable} ${notoSansJP.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

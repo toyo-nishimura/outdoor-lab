@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState, type ReactNode } from "react";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { Shell } from "@/components/Shell";
 import { site } from "@/data/site";
-
-const textNav = site.nav.filter((item) => !item.cta);
-const ctaNav = site.nav.find((item) => item.cta);
+import { useI18n } from "@/lib/i18n";
 
 function CtaLink({
   href,
@@ -43,6 +42,9 @@ function CtaLink({
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const { t } = useI18n();
+  const textNav = site.nav.filter((item) => !item.cta);
+  const ctaNav = site.nav.find((item) => item.cta);
 
   useEffect(() => {
     if (!open) return;
@@ -64,7 +66,6 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg">
-      {/* Pexels Navbar: h80, pad 30, max 1440/1600 */}
       <Shell className="flex h-[80px] items-center justify-between gap-6">
         <Link
           href="/"
@@ -74,29 +75,30 @@ export function SiteHeader() {
           {site.name}
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex lg:gap-8">
+          <LanguageToggle />
           <nav
             className="flex items-center gap-[46px] text-[17px] font-medium text-ink"
-            aria-label="メイン"
+            aria-label={t("mainNav")}
           >
             {textNav.map((item) =>
               item.external ? (
                 <a
-                  key={item.label}
+                  key={item.labelKey}
                   href={item.href}
                   className="hover:opacity-70"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </a>
               ) : (
                 <Link
-                  key={item.label}
+                  key={item.labelKey}
                   href={item.href}
                   className="hover:opacity-70"
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </Link>
               ),
             )}
@@ -107,20 +109,23 @@ export function SiteHeader() {
               external={ctaNav.external}
               className={ctaClassDesktop}
             >
-              {ctaNav.label}
+              {t(ctaNav.labelKey)}
             </CtaLink>
           ) : null}
         </div>
 
-        <button
-          type="button"
-          className="inline-flex h-11 w-11 items-center justify-center text-ink md:hidden"
-          aria-label={open ? "メニューを閉じる" : "メニューを開く"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <CloseIcon /> : <MenuIcon />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageToggle />
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center text-ink"
+            aria-label={open ? t("menuClose") : t("menuOpen")}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </Shell>
 
       {open ? (
@@ -129,23 +134,23 @@ export function SiteHeader() {
             {textNav.map((item) =>
               item.external ? (
                 <a
-                  key={item.label}
+                  key={item.labelKey}
                   href={item.href}
                   className="py-3 text-[17px] font-medium text-ink"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </a>
               ) : (
                 <Link
-                  key={item.label}
+                  key={item.labelKey}
                   href={item.href}
                   className="py-3 text-[17px] font-medium text-ink"
                   onClick={() => setOpen(false)}
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </Link>
               ),
             )}
@@ -156,7 +161,7 @@ export function SiteHeader() {
                 className={ctaClassMobile}
                 onClick={() => setOpen(false)}
               >
-                {ctaNav.label}
+                {t(ctaNav.labelKey)}
               </CtaLink>
             ) : null}
           </Shell>
