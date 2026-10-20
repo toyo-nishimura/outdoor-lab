@@ -43,17 +43,42 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
 
       <main className="px-5 py-10 sm:px-8 sm:py-14">
         <article className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden bg-mist">
-            <Image
-              src={photo.src}
-              alt={title}
-              width={photo.width}
-              height={photo.height}
-              priority
-              sizes="(max-width: 1024px) 100vw, 1024px"
-              className="h-auto w-full object-cover"
-            />
-          </div>
+          {isVideo ? (
+            <a
+              href={getMediaOpenUrl(photo)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block cursor-pointer overflow-hidden bg-mist outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2"
+              aria-label={t("playExternal")}
+            >
+              <Image
+                src={photo.src}
+                alt={title}
+                width={photo.width}
+                height={photo.height}
+                priority
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="h-auto w-full object-cover"
+              />
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setLightboxOpen(true)}
+              className="relative block w-full cursor-pointer overflow-hidden bg-mist outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2"
+              aria-label={t("openMedia")}
+            >
+              <Image
+                src={photo.src}
+                alt=""
+                width={photo.width}
+                height={photo.height}
+                priority
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="h-auto w-full object-cover"
+              />
+            </button>
+          )}
 
           <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
             <div>
