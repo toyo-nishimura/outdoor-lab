@@ -105,6 +105,30 @@ export default function TermsPage() {
               </ul>
             </section>
 
+            <section className="mt-12">
+              <h2 className="font-display text-2xl font-bold text-pine">
+                写真の利用について
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-moss sm:text-lg">
+                当サイトに掲載している写真は、すべて無料で自由にご利用いただけます（商用・個人問わず）。Webサイト、SNS、印刷物、動画などの素材としてお使いください。
+              </p>
+
+              <h3 className="font-display mt-10 text-xl font-bold text-pine">
+                ご注意いただきたいこと
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-ink">
+                写真の中に、神社仏閣、特定の建物、私有地、登録商標や看板などが写り込んでいる場合があります。こうした被写体を含む写真を利用する場合、商用利用や媒体の性質によっては、権利者や所有者への確認・許可取りが必要となることがあります。
+                ご利用の際は、ご自身の責任において適切にご判断・ご対応をお願いいたします。
+              </p>
+
+              <h3 className="font-display mt-10 text-xl font-bold text-pine">
+                免責事項
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-ink">
+                当サイトの写真は予告なく公開停止・削除する場合があります。また、当サイトの写真を利用したことによって発生したトラブルや損害、損失について、当方は一切の責任を負いかねます。あらかじめご了承ください。
+              </p>
+            </section>
+
             <p className="mt-12 text-sm leading-relaxed text-sage">
               撮影・制作のご相談はホームの「撮影依頼・ご相談」からどうぞ。
             </p>
