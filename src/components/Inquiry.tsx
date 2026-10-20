@@ -1,33 +1,37 @@
 import { Shell } from "@/components/Shell";
+import { site } from "@/data/site";
 
 export function Inquiry() {
   return (
-    <section id="contact" className="border-t border-fog/80 bg-paper py-10 sm:py-12">
+    <section id="contact" className="border-t border-line bg-bg py-12 sm:py-16">
       <Shell>
         <div className="max-w-2xl">
-          <h2 className="font-display text-lg font-bold tracking-tight text-pine sm:text-xl">
-            写真撮影・ブランドビジュアル制作について
+          <h2 className="font-display text-[22px] font-bold tracking-tight text-ink sm:text-[26px]">
+            {site.inquiryHeading}
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-moss">
-            当サイトの写真を撮影しているフォトグラファー／デザイナーが、出張撮影や記事用の写真カット、ブランドのビジュアル制作などを承ります。現場の空気感を大切に、イメージを一緒にかたちにします。
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-moss">
-            詳細や過去の実績・ポートフォリオは下記よりご覧ください。
-          </p>
-          <div className="mt-4 flex flex-wrap items-center gap-3">
+          {site.inquiryBody.map((paragraph) => (
+            <p
+              key={paragraph.slice(0, 24)}
+              className="mt-3 text-[15px] leading-relaxed text-muted sm:text-[16px]"
+            >
+              {paragraph}
+            </p>
+          ))}
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
-              href="https://takashi-portfolio.web.app/"
+              href={site.portfolioUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-pine px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-moss"
+              className="inline-flex h-12 items-center justify-center rounded-[8px] bg-ink px-5 text-[15px] font-semibold text-white hover:opacity-90"
             >
               ポートフォリオを見る
             </a>
+            {/* External form-ready: swap site.inquiryFormUrl → Google Form */}
             <a
-              href="https://takashi-portfolio.web.app/#contact"
+              href={site.inquiryFormUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border border-pine px-4 py-2.5 text-sm font-semibold text-pine transition hover:bg-mist"
+              className="inline-flex h-12 items-center justify-center rounded-[8px] border border-ink px-5 text-[15px] font-semibold text-ink hover:bg-chip"
             >
               お問い合わせ
             </a>

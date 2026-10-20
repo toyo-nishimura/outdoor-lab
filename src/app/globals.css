@@ -1,42 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  /* Mist Trail — dawn mist over pine river */
-  --pine: #1e3a2f;
-  --moss: #3d5c4a;
-  --sage: #6b8f7a;
-  --mist: #e8eee9;
-  --fog: #c5d0c8;
+  /* Pexels-measured tokens (ja-jp @ 1440) + outdoor-lab brand */
+  --bg: #ffffff;
+  --ink: #000000;
+  --ink-soft: #1a1a1a;
+  --muted: #5e5e5e;
+  --muted-2: #8e8e8e;
+  --line: #e8e8e8;
+  --search: #f7f7f7;
+  --chip: #f0f0f0;
+  --brand: #1a1a1a;
+  --accent: #05a081;
+  --background: var(--bg);
+  --foreground: var(--ink-soft);
+  /* legacy aliases used by detail page */
+  --pine: #1a1a1a;
+  --moss: #5e5e5e;
+  --sage: #8e8e8e;
+  --mist: #f0f0f0;
+  --fog: #e8e8e8;
   --ember: #b8722e;
-  --ember-deep: #8f5720;
-  --ink: #1a241c;
-  --paper: #f4f7f5;
-  --background: var(--paper);
-  --foreground: var(--ink);
+  --paper: #ffffff;
+  --ink-legacy: #1a1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-line: var(--line);
+  --color-search: var(--search);
+  --color-chip: var(--chip);
+  --color-brand: var(--brand);
+  --color-accent: var(--accent);
   --color-pine: var(--pine);
   --color-moss: var(--moss);
   --color-sage: var(--sage);
   --color-mist: var(--mist);
   --color-fog: var(--fog);
   --color-ember: var(--ember);
-  --color-ember-deep: var(--ember-deep);
-  --color-ink: var(--ink);
   --color-paper: var(--paper);
-  /* Match eye-see-design: Archivo (UI/display) + League Spartan (accent) + Noto Sans JP */
   --font-sans: var(--font-archivo), var(--font-noto-sans-jp);
   --font-display: var(--font-archivo), var(--font-noto-sans-jp);
-  --font-accent: var(--font-league-spartan), var(--font-archivo), var(--font-noto-sans-jp);
+  --font-accent: var(--font-league-spartan), var(--font-archivo),
+    var(--font-noto-sans-jp);
 }
 
 body {
-  /* Light grey / off-white ground — photos dominate (Pexels-like) */
-  background: var(--paper);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--ink-soft);
   font-family: var(--font-archivo), var(--font-noto-sans-jp), "Hiragino Sans",
     "Noto Sans JP", system-ui, sans-serif;
 }
@@ -50,65 +67,4 @@ body {
   font-family: var(--font-league-spartan), var(--font-archivo),
     var(--font-noto-sans-jp), "Hiragino Sans", "Noto Sans JP", system-ui,
     sans-serif;
-}
-
-@keyframes hero-fade {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes ken-burns {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.08);
-  }
-}
-
-@keyframes grid-in {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-hero-fade {
-  animation: hero-fade 1s ease-out both;
-}
-
-.animate-hero-fade-delay {
-  animation: hero-fade 1s ease-out 0.18s both;
-}
-
-.animate-hero-fade-delay-2 {
-  animation: hero-fade 1s ease-out 0.32s both;
-}
-
-.animate-ken-burns {
-  animation: ken-burns 18s ease-out forwards;
-}
-
-.animate-grid-in {
-  animation: grid-in 0.7s ease-out both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-hero-fade,
-  .animate-hero-fade-delay,
-  .animate-hero-fade-delay-2,
-  .animate-ken-burns,
-  .animate-grid-in {
-    animation: none;
-  }
 }

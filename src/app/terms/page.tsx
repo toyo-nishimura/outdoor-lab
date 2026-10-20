@@ -105,13 +105,12 @@ export default function TermsPage() {
             </section>
 
             <p className="mt-12 text-sm leading-relaxed text-sage">
-              掲載写真の一部はプレースホルダ（Unsplash
-              等）です。本番運用時はオリジナル撮影分へ差し替えます。撮影・制作のご相談はホームの「撮影依頼・ご相談」からどうぞ。
+              撮影・制作のご相談はホームの「撮影依頼・ご相談」からどうぞ。
             </p>
 
             <a
               href="/#contact"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
             >
               撮影依頼・ご相談へ
             </a>

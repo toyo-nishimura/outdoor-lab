@@ -9,15 +9,15 @@ import {
   photos,
   type PhotoCategory,
 } from "@/data/photos";
+import { site } from "@/data/site";
 
 type Filter = PhotoCategory | "すべて";
 
 const categoryThumbs: Record<PhotoCategory, string> = {
-  キャンプ:
-    "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=120&h=120&q=80",
-  山: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=120&h=120&q=80",
-  水辺: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=120&h=120&q=80",
-  森: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=120&h=120&q=80",
+  キャンプ: "/photos/camp-morning.jpg",
+  山: "/photos/river-dawn.jpg",
+  水辺: "/photos/sunset-bay.jpg",
+  森: "/photos/river-mist.jpg",
 };
 
 export function HomeGallery() {
@@ -41,32 +41,33 @@ export function HomeGallery() {
 
   return (
     <>
-      {/* Hero band — ~360px Pexels-style: headline + search, optional promo */}
-      <section className="border-b border-fog/60 bg-paper">
-        <Shell className="flex min-h-[320px] flex-col justify-center gap-8 py-10 sm:min-h-[360px] sm:flex-row sm:items-center sm:justify-between sm:gap-12 sm:py-12">
-          <div className="max-w-xl flex-1 animate-hero-fade">
-            <h1 className="font-display text-[28px] font-bold leading-[1.25] tracking-tight text-pine sm:text-[36px] lg:text-[40px]">
-              自然の息吹を、そのまま手元に。アウトドアに特化したフリー写真素材。
+      {/* Hero — Pexels: h≈360, pad 30 30 0, left copy + search */}
+      <section className="bg-bg">
+        <Shell className="flex min-h-[320px] flex-col justify-center gap-8 pb-0 pt-[30px] sm:min-h-[360px] sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+          <div className="max-w-[728px] flex-1">
+            <h1 className="font-display text-[28px] font-bold leading-[1.3] tracking-tight text-ink sm:text-[34px] lg:text-[38px]">
+              {site.headline}
             </h1>
+            {/* SearchInput_container: 72h, #f7f7f7, radius 12, pad 12 */}
             <form
-              className="mt-6 flex h-[56px] items-center gap-2 rounded-xl bg-[#f0f3f1] px-3 sm:h-[64px] sm:px-4"
+              className="mt-[30px] flex h-[56px] items-center gap-2 rounded-[12px] bg-search p-3 sm:h-[72px]"
               onSubmit={(e) => e.preventDefault()}
               role="search"
             >
-              <span className="hidden shrink-0 rounded-lg bg-white px-3 py-2 text-sm font-medium text-moss sm:inline">
+              <span className="hidden shrink-0 items-center gap-1.5 rounded-lg bg-white px-3 py-2 text-[15px] font-medium text-ink sm:inline-flex">
                 写真
               </span>
               <input
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="フリー写真を検索"
-                className="min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-sage sm:text-[17px]"
+                placeholder={site.searchPlaceholder}
+                className="min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-muted-2 sm:text-[17px]"
                 aria-label="写真を検索"
               />
               <button
                 type="submit"
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-moss hover:bg-white hover:text-pine"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center text-muted hover:text-ink"
                 aria-label="検索"
               >
                 <SearchIcon />
@@ -74,33 +75,30 @@ export function HomeGallery() {
             </form>
           </div>
 
-          {/* Thin outdoor promo — keeps Pexels left/right balance without ad cards */}
-          <div className="relative hidden h-[220px] w-[280px] shrink-0 overflow-hidden rounded-2xl sm:block lg:h-[240px] lg:w-[320px]">
+          {/* Right visual — Pexels challenge-card slot; one outdoor still, no promo stickers */}
+          <div className="relative mb-[30px] hidden h-[260px] w-[280px] shrink-0 overflow-hidden rounded-[16px] sm:block lg:h-[300px] lg:w-[300px]">
             <Image
-              src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&h=600&q=80"
-              alt="キャンプの夜明け"
+              src="/photos/camp-morning.jpg"
+              alt=""
               fill
-              sizes="320px"
-              className="object-cover animate-ken-burns"
+              sizes="300px"
+              className="object-cover"
               priority
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/75 to-transparent px-4 pb-4 pt-10">
-              <p className="text-sm font-medium text-white">アウトドアの空気を、そのまま。</p>
-            </div>
           </div>
         </Shell>
       </section>
 
-      {/* Category pills — Pexels trending row with circular thumbs */}
-      <section className="border-b border-fog/50 bg-paper py-5">
+      {/* Category pills — SearchTermPill: circle 38 + label, radius full */}
+      <section className="border-t border-line bg-bg py-6">
         <Shell>
-          <div className="mb-3 flex items-end justify-between gap-4">
-            <h2 className="font-display text-lg font-semibold text-pine sm:text-xl">
-              無料の写真素材
+          <div className="mb-4 flex items-end justify-between gap-4">
+            <h2 className="font-display text-[20px] font-semibold text-ink sm:text-[22px]">
+              {site.galleryHeading}
             </h2>
-            <p className="text-sm text-sage">{items.length} 点</p>
+            <p className="text-[14px] text-muted-2">{items.length} 点</p>
           </div>
-          <div className="flex gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-[10px] overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {filters.map((item) => {
               const active = item === filter;
               const thumb =
@@ -114,17 +112,17 @@ export function HomeGallery() {
                   onClick={() => setFilter(item)}
                   className={
                     active
-                      ? "flex shrink-0 items-center gap-2.5 rounded-full border border-pine bg-pine py-1.5 pl-1.5 pr-4 text-sm font-medium text-white"
-                      : "flex shrink-0 items-center gap-2.5 rounded-full border border-fog bg-white py-1.5 pl-1.5 pr-4 text-sm font-medium text-moss hover:border-sage hover:text-pine"
+                      ? "flex h-12 shrink-0 items-center gap-2.5 rounded-full bg-ink py-1.5 pl-1.5 pr-4 text-[15px] font-medium text-white"
+                      : "flex h-12 shrink-0 items-center gap-2.5 rounded-full border border-line bg-bg py-1.5 pl-1.5 pr-4 text-[15px] font-medium text-ink hover:bg-chip"
                   }
                 >
                   {thumb ? (
                     <Image
                       src={thumb}
                       alt=""
-                      width={36}
-                      height={36}
-                      className="h-9 w-9 rounded-full object-cover"
+                      width={38}
+                      height={38}
+                      className="h-[38px] w-[38px] rounded-full object-cover"
                     />
                   ) : null}
                   <span>{item}</span>
@@ -135,24 +133,20 @@ export function HomeGallery() {
         </Shell>
       </section>
 
-      {/* Masonry: 4 cols desktop, rounded thumbs, 12–16px gutters */}
-      <section id="gallery" className="scroll-mt-20 bg-paper py-4 sm:py-5">
+      {/* Masonry — gap 24; 2 → 3 → 4 cols; not full-bleed (inside Shell 1600) */}
+      <section id="gallery" className="scroll-mt-[80px] bg-bg py-2 sm:py-4">
         <Shell>
           {items.length === 0 ? (
-            <p className="py-16 text-center text-moss">
+            <p className="py-16 text-center text-muted">
               該当する写真がありません。検索語やカテゴリを変えてみてください。
             </p>
           ) : (
-            <ul className="columns-2 gap-[14px] md:columns-3 xl:columns-4">
-              {items.map((photo, index) => (
-                <li
-                  key={photo.id}
-                  className="animate-grid-in mb-[14px] break-inside-avoid"
-                  style={{ animationDelay: `${Math.min(index, 8) * 40}ms` }}
-                >
+            <ul className="columns-2 gap-6 md:columns-3 xl:columns-4">
+              {items.map((photo) => (
+                <li key={photo.id} className="mb-6 break-inside-avoid">
                   <Link
                     href={`/photos/${photo.id}`}
-                    className="group relative block overflow-hidden rounded-[10px] bg-mist"
+                    className="group relative block overflow-hidden rounded-[8px] bg-chip"
                   >
                     <Image
                       src={photo.src}
@@ -160,15 +154,17 @@ export function HomeGallery() {
                       width={photo.width}
                       height={photo.height}
                       sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                      className="h-auto w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                      className="h-auto w-full object-cover"
                     />
                     {photo.mediaType === "video" ? (
-                      <span className="pointer-events-none absolute left-2 top-2 rounded-md bg-pine/85 px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-white">
+                      <span className="pointer-events-none absolute left-2 top-2 rounded bg-ink/85 px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-white">
                         動画
                       </span>
                     ) : null}
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/80 to-transparent px-3 pb-3 pt-10 opacity-0 transition group-hover:opacity-100">
-                      <p className="text-sm font-medium text-white">{photo.title}</p>
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-3 pb-3 pt-10 opacity-0 transition-opacity group-hover:opacity-100">
+                      <p className="text-sm font-medium text-white">
+                        {photo.title}
+                      </p>
                       <p className="text-xs text-white/80">{photo.category}</p>
                     </div>
                   </Link>

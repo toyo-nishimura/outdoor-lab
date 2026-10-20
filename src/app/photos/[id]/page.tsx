@@ -64,13 +64,10 @@ export default async function PhotoDetailPage({
                 クレジット：{" "}
                 <a
                   href={photo.creditUrl}
-                  target="_blank"
-                  rel="noreferrer"
                   className="underline decoration-fog underline-offset-2 hover:text-pine"
                 >
                   {photo.credit}
                 </a>
-                （MVPプレースホルダ）
               </p>
             </div>
 
