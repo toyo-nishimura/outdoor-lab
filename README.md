@@ -28,8 +28,8 @@ npm run build   # static export → out/
 
 ## Deploy (Firebase Hosting)
 
-- Live: https://outdoor-lab-toyo.web.app
-- Project ID: `outdoor-lab-toyo`
+- Live: https://outdoor-lab-japan.web.app
+- Project ID: `outdoor-lab-japan`
 - Mode: classic Hosting + `output: 'export'` (not App Hosting)
 
 ```bash
