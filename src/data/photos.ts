@@ -38,8 +38,8 @@ export const photos: MediaItem[] = [
     src: "/photos/sunset-bay.jpg",
     credit: "outdoor-lab",
     creditUrl: "/",
-    width: 1600,
-    height: 1066,
+    width: 2304,
+    height: 1536,
   },
   {
     id: "river-dawn",
@@ -50,8 +50,8 @@ export const photos: MediaItem[] = [
     src: "/photos/river-dawn.jpg",
     credit: "outdoor-lab",
     creditUrl: "/",
-    width: 1600,
-    height: 1066,
+    width: 2304,
+    height: 1536,
   },
   {
     id: "river-mist",
@@ -62,8 +62,8 @@ export const photos: MediaItem[] = [
     src: "/photos/river-mist.jpg",
     credit: "outdoor-lab",
     creditUrl: "/",
-    width: 1066,
-    height: 1600,
+    width: 1536,
+    height: 2304,
   },
   {
     id: "camp-morning",
@@ -74,8 +74,8 @@ export const photos: MediaItem[] = [
     src: "/photos/camp-morning.jpg",
     credit: "outdoor-lab",
     creditUrl: "/",
-    width: 1600,
-    height: 1066,
+    width: 2304,
+    height: 1536,
   },
 ];
 
