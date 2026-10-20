@@ -98,7 +98,7 @@ export function HomeGallery() {
 
       <section className="border-t border-line bg-bg py-6">
         <Shell>
-          <div className="mb-4 flex items-end justify-between gap-4">
+          <div className="mb-[30px] flex items-end justify-between gap-4">
             <div>
               <h2 className="font-display text-[20px] font-semibold text-ink sm:text-[22px]">
                 {t("galleryHeading")}
