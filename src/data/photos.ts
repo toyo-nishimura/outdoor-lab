@@ -1,4 +1,4 @@
-export type PhotoCategory = "キャンプ" | "山" | "水辺" | "森";
+export type PhotoCategory = "山" | "水辺" | "森" | "里";
 
 /** photo = still; video = externally hosted (YouTube/Vimeo/etc.), never on Firebase Hosting */
 export type MediaType = "photo" | "video";
@@ -25,9 +25,9 @@ export type MediaItem = {
 /** @deprecated Prefer MediaItem — kept for existing imports */
 export type Photo = MediaItem;
 
-export const categories: PhotoCategory[] = ["キャンプ", "山", "水辺", "森"];
+export const categories: PhotoCategory[] = ["山", "水辺", "森", "里"];
 
-/** Primary visible set — original outdoor-lab stills */
+/** Primary visible set — stills from walks / location shoots */
 export const photos: MediaItem[] = [
   {
     id: "sunset-bay",
@@ -56,7 +56,7 @@ export const photos: MediaItem[] = [
   {
     id: "river-mist",
     title: "朝靄の川辺",
-    category: "水辺",
+    category: "森",
     location: "河畔",
     mediaType: "photo",
     src: "/photos/river-mist.jpg",
@@ -67,8 +67,8 @@ export const photos: MediaItem[] = [
   },
   {
     id: "camp-morning",
-    title: "朝のキャンプ",
-    category: "キャンプ",
+    title: "朝の林縁",
+    category: "里",
     location: "林縁",
     mediaType: "photo",
     src: "/photos/camp-morning.jpg",

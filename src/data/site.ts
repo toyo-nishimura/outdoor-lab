@@ -7,18 +7,20 @@ const inquiryFormUrl =
 
 export const site = {
   name: "outdoor-lab",
-  tagline: "撮影／デザイン／ライティング",
+  tagline: "日本の風景 · 撮影／デザイン／ライティング",
   headline:
-    "自然の息吹を、そのまま手元に。アウトドアに特化したフリー写真素材。",
-  searchPlaceholder: "無料の写真を検索",
-  galleryHeading: "無料の写真素材",
+    "日本の風景を、歩きながら撮って、そのまま使える素材棚。",
+  supportingLine:
+    "フォトウォークとロケで撮った風景を、記事・制作・案件用のフリー写真として公開しています。",
+  searchPlaceholder: "日本の風景を検索",
+  galleryHeading: "日本の風景",
   portfolioUrl: "https://takashi-portfolio.web.app/",
   portfolioContactUrl: "https://takashi-portfolio.web.app/#contact",
   /** 撮影依頼・ご相談 → Google Form */
   inquiryFormUrl,
   inquiryHeading: "写真撮影・ブランドビジュアル制作について",
   inquiryBody: [
-    "当サイトの写真を撮影しているフォトグラファー／デザイナーが、出張撮影や記事用の写真カット、ブランドのビジュアル制作などを承ります。現場の空気感を大切に、イメージを一緒にかたちにします。",
+    "当サイトの写真を撮影しているフォトグラファー／デザイナーが、風景ロケや出張撮影、記事用カット、ブランドのビジュアル制作などを承ります。歩きながら現場の空気感を大切に、イメージを一緒にかたちにします。",
     "詳細や過去の実績・ポートフォリオは下記よりご覧ください。",
   ],
   nav: [

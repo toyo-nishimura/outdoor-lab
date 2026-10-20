@@ -14,10 +14,10 @@ import { site } from "@/data/site";
 type Filter = PhotoCategory | "すべて";
 
 const categoryThumbs: Record<PhotoCategory, string> = {
-  キャンプ: "/photos/camp-morning.jpg",
   山: "/photos/river-dawn.jpg",
   水辺: "/photos/sunset-bay.jpg",
   森: "/photos/river-mist.jpg",
+  里: "/photos/camp-morning.jpg",
 };
 
 export function HomeGallery() {
@@ -48,6 +48,9 @@ export function HomeGallery() {
             <h1 className="font-display text-[28px] font-bold leading-[1.3] tracking-tight text-ink sm:text-[34px] lg:text-[38px]">
               {site.headline}
             </h1>
+            <p className="mt-3 max-w-[40rem] text-[15px] leading-relaxed text-muted sm:text-[16px]">
+              {site.supportingLine}
+            </p>
             {/* SearchInput_container: 72h, #f7f7f7, radius 12, pad 12 */}
             <form
               className="mt-[30px] flex h-[56px] items-center gap-2 rounded-[12px] bg-search p-3 sm:h-[72px]"

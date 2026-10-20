@@ -16,7 +16,7 @@ export default function TermsPage() {
 
             <p className="mt-8 text-base leading-relaxed text-moss sm:text-lg">
               outdoor-lab
-              の写真は、無料でダウンロードして利用できます。アウトドアに特化したフリー写真素材として公開しています。
+              の写真は、無料でダウンロードして利用できます。日本の風景をテーマにしたフリー写真素材として公開しています。
             </p>
 
             <section className="mt-12">
