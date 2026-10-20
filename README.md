@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# outdoor-lab
 
-## Getting Started
+アウトドア特化の写真グリッドサイト（MVP）。Pexels 風のグリッド UI のみを参考にした、撮影仕事の導線・業務委託アピール・「素材困ったらここ」用の棚です。ストックマーケットのクローンではありません。
 
-First, run the development server:
+Brand: **outdoor-lab**（撮影／デザイン／ライティング）
+
+## Stack
+
+- Next.js (App Router) + TypeScript + Tailwind CSS
+
+## Local path
+
+`~/Projects/outdoor-lab`
+
+## How to run
 
 ```bash
+cd ~/Projects/outdoor-lab
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run start   # serve production build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design direction
 
-## Learn More
+**Mist Trail** — 夜明けの霧と針葉樹。紙色の地に松緑（pine）とモス、CTA に控えめなアンバー（ember）。ディスプレイは Syne、本文は Figtree。フルブリードヒーロー＋ゆっくり Ken Burns、グリッドのスタッガー入場。
 
-To learn more about Next.js, take a look at the following resources:
+## Placeholder image credits
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MVP の写真は Unsplash の無料素材です（本番前にオリジナルへ差し替え予定）。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| ID | Credit | Source |
+| --- | --- | --- |
+| hero | Jay Mantri / Unsplash | forest / water scene |
+| camp-dawn | Christopher Burns / Unsplash | camping |
+| camp-fire | Toa Heftiba / Unsplash | camp gathering |
+| mountain-ridge | Kalen Emsley / Unsplash | mountain range |
+| mountain-hike | Neil Thomas / Unsplash | hiking ridge |
+| water-lake | Luca Bravo / Unsplash | lake |
+| water-stream | Eberhard Grossgasteiger / Unsplash | alpine landscape |
+| forest-path | Jay Mantri / Unsplash | forest path |
+| forest-mist | Sebastian Unrau / Unsplash | misty trees |
+| camp-lantern | Caleb Jones / Unsplash | tent |
 
-## Deploy on Vercel
+詳細 URL は `src/data/photos.ts` を参照。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+問い合わせプレースホルダ: `hello@outdoor-lab.example`

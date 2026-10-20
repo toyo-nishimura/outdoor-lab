@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Mist Trail — dawn mist over pine river */
+  --pine: #1e3a2f;
+  --moss: #3d5c4a;
+  --sage: #6b8f7a;
+  --mist: #e8eee9;
+  --fog: #c5d0c8;
+  --ember: #b8722e;
+  --ember-deep: #8f5720;
+  --ink: #1a241c;
+  --paper: #f4f7f5;
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-pine: var(--pine);
+  --color-moss: var(--moss);
+  --color-sage: var(--sage);
+  --color-mist: var(--mist);
+  --color-fog: var(--fog);
+  --color-ember: var(--ember);
+  --color-ember-deep: var(--ember-deep);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --font-sans: var(--font-figtree);
+  --font-display: var(--font-syne);
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(120% 80% at 10% -10%, color-mix(in oklab, var(--fog) 55%, transparent), transparent 55%),
+    radial-gradient(90% 60% at 100% 0%, color-mix(in oklab, var(--sage) 18%, transparent), transparent 50%),
+    linear-gradient(180deg, var(--mist) 0%, var(--paper) 40%, var(--paper) 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-figtree), "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-syne), "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes grid-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: hero-fade 1s ease-out both;
+}
+
+.animate-hero-fade-delay {
+  animation: hero-fade 1s ease-out 0.18s both;
+}
+
+.animate-hero-fade-delay-2 {
+  animation: hero-fade 1s ease-out 0.32s both;
+}
+
+.animate-ken-burns {
+  animation: ken-burns 18s ease-out forwards;
+}
+
+.animate-grid-in {
+  animation: grid-in 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-fade,
+  .animate-hero-fade-delay,
+  .animate-hero-fade-delay-2,
+  .animate-ken-burns,
+  .animate-grid-in {
+    animation: none;
+  }
 }
