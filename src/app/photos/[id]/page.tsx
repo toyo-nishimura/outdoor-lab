@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getPhotoById, photos } from "@/data/photos";
+import { getMediaOpenUrl, getPhotoById, photos } from "@/data/photos";
 
 export function generateStaticParams() {
   return photos.map((photo) => ({ id: photo.id }));
@@ -48,6 +48,7 @@ export default async function PhotoDetailPage({
           <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
             <div>
               <p className="text-sm font-medium tracking-wide text-sage">
+                {photo.mediaType === "video" ? "動画" : "写真"} ·{" "}
                 {photo.category} · {photo.location}
               </p>
               <h1 className="font-display mt-2 text-3xl font-bold text-pine sm:text-4xl">
@@ -55,9 +56,12 @@ export default async function PhotoDetailPage({
               </h1>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-moss">
                 素材利用の目安は利用条件をご確認ください。業務委託・撮影案件の相談も歓迎です。
+                {photo.mediaType === "video"
+                  ? " 動画は外部ホストで公開し、ここでは埋め込み／リンクのみ想定しています。"
+                  : null}
               </p>
               <p className="mt-3 text-sm text-sage">
-                写真クレジット：{" "}
+                クレジット：{" "}
                 <a
                   href={photo.creditUrl}
                   target="_blank"
@@ -72,12 +76,12 @@ export default async function PhotoDetailPage({
 
             <div className="flex flex-col gap-3 sm:min-w-52">
               <a
-                href={photo.src}
+                href={getMediaOpenUrl(photo)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
               >
-                素材を開く
+                {photo.mediaType === "video" ? "外部で再生" : "素材を開く"}
               </a>
               <Link
                 href="/terms"
@@ -89,7 +93,7 @@ export default async function PhotoDetailPage({
                 href={`mailto:hello@outdoor-lab.example?subject=素材について：${photo.title}`}
                 className="inline-flex items-center justify-center border border-fog px-5 py-3 text-sm font-semibold text-moss transition hover:border-sage hover:text-pine"
               >
-                この写真について相談
+                この素材について相談
               </a>
             </div>
           </div>
