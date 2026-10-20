@@ -100,7 +100,7 @@ export function HomeGallery() {
         <Shell>
           <div className="mb-[30px] flex items-end justify-between gap-4">
             <div>
-              <h2 className="font-display text-[20px] font-semibold text-ink sm:text-[22px]">
+              <h2 className="mb-[10px] font-display text-[20px] font-semibold text-ink sm:text-[22px]">
                 {t("galleryHeading")}
               </h2>
               <p className="mt-1 text-[14px] text-muted-2">
