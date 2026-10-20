@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useState } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import {
   categoryLabels,
   getMediaOpenUrl,
   tLocal,
   type MediaItem,
 } from "@/data/photos";
-import { site } from "@/data/site";
 import { useI18n } from "@/lib/i18n";
 
 export function PhotoDetail({ photo }: { photo: MediaItem }) {
@@ -38,22 +38,7 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
 
   return (
     <>
-      <header className="border-b border-fog/80 px-5 py-5 sm:px-8">
-        <div className="mx-auto flex max-w-5xl items-center justify-between">
-          <Link
-            href="/"
-            className="font-display text-lg font-bold tracking-tight text-pine"
-          >
-            {site.name}
-          </Link>
-          <Link
-            href="/#gallery"
-            className="text-sm font-medium text-moss hover:text-pine"
-          >
-            {t("backToGrid")}
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="px-5 py-10 sm:px-8 sm:py-14">
         <article className="mx-auto max-w-5xl">
