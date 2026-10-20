@@ -25,13 +25,10 @@ export function Hero() {
 
       <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-5 pb-16 pt-28 sm:px-8 sm:pb-20">
         <div className="mx-auto w-full max-w-6xl">
-          <p className="animate-hero-fade font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
-            outdoor-lab
-          </p>
-          <h1 className="animate-hero-fade-delay mt-4 max-w-xl text-2xl font-medium leading-snug text-white sm:text-3xl md:text-4xl">
+          <h1 className="animate-hero-fade max-w-xl text-2xl font-medium leading-snug text-white sm:text-3xl md:text-4xl">
             アウトドアの空気を、そのまま使える素材棚。
           </h1>
-          <p className="animate-hero-fade-delay-2 mt-4 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
+          <p className="animate-hero-fade-delay mt-4 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
             キャンプ・山・水辺。撮影と制作で困ったときの、現場寄りの写真ラボ。
           </p>
           <div className="animate-hero-fade-delay-2 mt-8 flex flex-wrap gap-3">
