@@ -101,7 +101,7 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
                   {t("openMedia")}
                 </button>
               )}
-              <LikeButton photoId={photo.id} variant="inline" />
+              <LikeButton photoId={photo.id} />
               <Link
                 href="/terms"
                 className="inline-flex items-center justify-center border border-fog px-5 py-3 text-sm font-semibold text-pine transition hover:border-sage"

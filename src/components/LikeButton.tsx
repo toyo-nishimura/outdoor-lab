@@ -3,37 +3,20 @@
 import { useLikes } from "@/lib/likes";
 import { useI18n } from "@/lib/i18n";
 
-type Variant = "overlay" | "inline";
-
-export function LikeButton({
-  photoId,
-  variant = "inline",
-}: {
-  photoId: string;
-  variant?: Variant;
-}) {
+export function LikeButton({ photoId }: { photoId: string }) {
   const { t } = useI18n();
   const { ready, isLiked, toggle } = useLikes();
   const liked = ready && isLiked(photoId);
   const label = liked ? t("unlikeAria") : t("likeAria");
 
-  const base =
-    variant === "overlay"
-      ? "pointer-events-auto absolute right-2 top-2 z-10 inline-flex h-9 items-center gap-1 rounded-full bg-white/95 px-2.5 text-[13px] font-medium text-ink shadow-sm transition hover:bg-white"
-      : "inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-fog px-5 text-sm font-semibold text-pine transition hover:border-sage";
-
   return (
     <button
       type="button"
-      className={base}
+      className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-fog px-5 text-sm font-semibold text-pine transition hover:border-sage"
       aria-label={label}
       aria-pressed={liked}
       disabled={!ready}
-      onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggle(photoId);
-      }}
+      onClick={() => toggle(photoId)}
     >
       <HeartIcon filled={liked} />
       <span aria-hidden className="tabular-nums">
