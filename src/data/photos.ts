@@ -72,6 +72,11 @@ const nanzenjiLocation: LocalizedString = {
   en: "Nanzen-ji, Kyoto",
 };
 
+const hannyajiLocation: LocalizedString = {
+  ja: "般若寺（奈良）",
+  en: "Hannya-ji, Nara",
+};
+
 /** Primary visible set — stills from walks / location shoots */
 export const photos: MediaItem[] = [
   {
@@ -921,6 +926,66 @@ export const photos: MediaItem[] = [
     location: nanzenjiLocation,
     mediaType: "photo",
     src: "/photos/stock-l1004954.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-img-0664",
+    title: { ja: "石仏とコスモス", en: "Stone Buddha and cosmos" },
+    category: "寺社仏閣",
+    location: hannyajiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-img-0664.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-img-0667",
+    title: { ja: "コスモスの花", en: "Cosmos flowers" },
+    category: "風景・花",
+    location: hannyajiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-img-0667.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-img-0668",
+    title: { ja: "コスモスと屋根", en: "Cosmos and temple roof" },
+    category: "風景・花",
+    location: hannyajiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-img-0668.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 1536,
+    height: 2304,
+  },
+  {
+    id: "stock-img-0670",
+    title: { ja: "ピンクのコスモス", en: "Pink cosmos" },
+    category: "風景・花",
+    location: hannyajiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-img-0670.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-img-0671",
+    title: { ja: "岩上の像とコスモス", en: "Statue on the rock with cosmos" },
+    category: "寺社仏閣",
+    location: hannyajiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-img-0671.jpg",
     credit: "Japanphoto-lab",
     creditUrl: "/",
     width: 2304,
