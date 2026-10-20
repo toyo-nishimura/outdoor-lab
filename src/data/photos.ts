@@ -47,10 +47,10 @@ export const photos: MediaItem[] = [
     category: "キャンプ",
     location: "林縁",
     mediaType: "photo",
-    src: "https://images.unsplash.com/photo-1478131143081-80fbd22d3d6d?auto=format&fit=crop&w=1200&h=1600&q=80",
+    src: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1200&h=1600&q=80",
     credit: "Toa Heftiba / Unsplash",
     creditUrl:
-      "https://unsplash.com/photos/people-sitting-on-chairs-near-trees-during-daytime-0rlfiRSb9kg",
+      "https://unsplash.com/photos/people-sitting-beside-bonfire-during-night-time-0rlfiRSb9kg",
     width: 1200,
     height: 1600,
   },

@@ -17,13 +17,14 @@ export function PhotoGrid() {
   const filters: Filter[] = ["すべて", ...categories];
 
   return (
-    <section id="gallery" className="scroll-mt-16">
-      <div className="border-b border-fog/80 px-4 py-4 sm:px-6">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-          <p className="max-w-xl text-sm leading-relaxed text-moss sm:text-[15px]">
+    <section id="gallery" className="scroll-mt-14">
+      {/* Compact filter strip — same side inset as header/grid (Pexels ~30px) */}
+      <div className="border-b border-fog/80 px-4 py-1.5 sm:px-[30px]">
+        <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+          <p className="text-xs leading-snug text-moss sm:text-[13px]">
             アウトドアの空気を、そのまま使える素材棚。キャンプ・山・水辺・森。
           </p>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1">
             {filters.map((item) => {
               const active = item === filter;
               return (
@@ -33,8 +34,8 @@ export function PhotoGrid() {
                   onClick={() => setFilter(item)}
                   className={
                     active
-                      ? "bg-pine px-3 py-1.5 text-xs font-medium text-white sm:text-sm"
-                      : "bg-transparent px-3 py-1.5 text-xs font-medium text-moss hover:bg-mist hover:text-pine sm:text-sm"
+                      ? "bg-pine px-2.5 py-1 text-xs font-medium text-white"
+                      : "bg-transparent px-2.5 py-1 text-xs font-medium text-moss hover:bg-mist hover:text-pine"
                   }
                 >
                   {item}
@@ -45,12 +46,13 @@ export function PhotoGrid() {
         </div>
       </div>
 
-      <div className="px-2 py-2 sm:px-3 sm:py-3">
-        <ul className="mx-auto columns-2 gap-2 sm:columns-3 sm:gap-3 lg:columns-4 xl:max-w-[90rem]">
+      {/* Full-bleed masonry: no max-width; modest side pad; tight gutters */}
+      <div className="px-4 pt-1.5 pb-1.5 sm:px-[30px] sm:pt-2 sm:pb-2">
+        <ul className="columns-2 gap-2 sm:columns-3 lg:columns-4 xl:columns-5">
           {items.map((photo, index) => (
             <li
               key={photo.id}
-              className="animate-grid-in mb-2 break-inside-avoid sm:mb-3"
+              className="animate-grid-in mb-2 break-inside-avoid"
               style={{ animationDelay: `${Math.min(index, 8) * 40}ms` }}
             >
               <Link
@@ -62,7 +64,7 @@ export function PhotoGrid() {
                   alt={photo.title}
                   width={photo.width}
                   height={photo.height}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
                   className="h-auto w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                 />
                 {photo.mediaType === "video" ? (
