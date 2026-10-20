@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { Figtree, Syne } from "next/font/google";
+import { Archivo, League_Spartan, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
-  variable: "--font-syne",
+/** Same stack as eye-see-design: Archivo + League Spartan + Noto Sans JP */
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const figtree = Figtree({
-  variable: "--font-figtree",
+const leagueSpartan = League_Spartan({
+  variable: "--font-league-spartan",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ja"
-      className={`${syne.variable} ${figtree.variable} h-full antialiased`}
+      className={`${archivo.variable} ${leagueSpartan.variable} ${notoSansJP.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
