@@ -16,7 +16,7 @@ const STORAGE_KEY = "japanphoto-lab-locale";
 type Dict = Record<string, string>;
 
 const ja: Dict = {
-  navGallery: "写真一覧",
+  navGallery: "写真・動画一覧",
   navTerms: "利用条件",
   navInquiry: "撮影依頼・ご相談",
   headline: "自然の息吹を、そのまま手元に。",
@@ -24,17 +24,18 @@ const ja: Dict = {
     "ロケハンやフォトウォークで切り取った、日本各地の景色のフリー写真ストックです。",
   support2:
     "記事・デザインにそのまま使えます。撮影やビジュアル制作のご相談も受け付けています。",
-  searchPlaceholder: "無料の写真を検索",
-  searchAria: "写真を検索",
+  searchPlaceholder: "無料の写真・動画を検索",
+  searchAria: "写真・動画を検索",
   searchSubmit: "検索",
-  photoChip: "写真",
-  galleryHeading: "写真一覧",
+  photoChip: "写真・動画",
+  galleryHeading: "写真・動画一覧",
   gallerySubtext: "街・路地裏 · 寺社仏閣 · 風景・花 · アウトドア",
   galleryLead:
-    "カテゴリや検索で絞り込み、写真を開いて利用条件を確認してからお使いください。",
+    "カテゴリや検索で絞り込み、写真・動画を開いて利用条件を確認してからお使いください。",
   allFilter: "すべて",
   countSuffix: "点",
-  emptyGallery: "該当する写真がありません。検索語やカテゴリを変えてみてください。",
+  emptyGallery:
+    "該当する写真・動画がありません。検索語やカテゴリを変えてみてください。",
   videoBadge: "動画",
   inquiryHeading: "撮影のご依頼・ビジュアル制作について",
   inquiry1:
@@ -45,7 +46,8 @@ const ja: Dict = {
     "過去の実績はポートフォリオでご覧ください。撮影・制作のご相談はお問い合わせフォームからどうぞ。",
   portfolioCta: "ポートフォリオを見る",
   contactCta: "お問い合わせ",
-  footerCaption: "Japanphoto-lab · Photo Stock & Visual Practice / 撮影・デザイン",
+  footerCaption:
+    "Japanphoto-lab · Photo & Video Stock & Visual Practice / 撮影・デザイン",
   menuOpen: "メニューを開く",
   menuClose: "メニューを閉じる",
   mainNav: "メイン",
@@ -91,7 +93,7 @@ const ja: Dict = {
     "撮影・制作のご相談はホームの「撮影依頼・ご相談」からどうぞ。",
   termsInquiryCta: "撮影依頼・ご相談へ",
   backToGrid: "グリッドへ戻る",
-  backToGallery: "一覧に戻る",
+  backToGallery: "写真・動画一覧へ戻る",
   openMedia: "素材を開く",
   closeMedia: "閉じる",
   playExternal: "外部で再生",
@@ -109,7 +111,7 @@ const ja: Dict = {
 };
 
 const en: Dict = {
-  navGallery: "Photos",
+  navGallery: "Photos & videos",
   navTerms: "Terms of use",
   navInquiry: "Book a shoot",
   headline: "Free photos of Japan—ready for your next story.",
@@ -117,17 +119,17 @@ const en: Dict = {
     "A free photo library from location scouts and photo walks across Japan: streets, temples, scenery, and outdoor moments.",
   support2:
     "Use them in articles, websites, and design. Need a custom shoot or brand visuals? You can inquire here.",
-  searchPlaceholder: "Search free photos of Japan",
-  searchAria: "Search photos",
+  searchPlaceholder: "Search free photos & videos",
+  searchAria: "Search photos & videos",
   searchSubmit: "Search",
-  photoChip: "Photos",
-  galleryHeading: "Browse the library",
+  photoChip: "Photos & videos",
+  galleryHeading: "Photos & videos",
   gallerySubtext: "Streets & alleys · Temples & shrines · Scenery & flowers · Outdoor",
   galleryLead:
-    "Filter by category or search, open a photo, check Terms of use, then view the full image.",
+    "Filter by category or search, open a photo or video, check Terms of use, then view the full media.",
   allFilter: "All",
-  countSuffix: "photos",
-  emptyGallery: "No photos match. Try another search or category.",
+  countSuffix: "items",
+  emptyGallery: "No photos or videos match. Try another search or category.",
   videoBadge: "Video",
   inquiryHeading: "Commission a shoot or visual project",
   inquiry1:
@@ -139,7 +141,7 @@ const en: Dict = {
   portfolioCta: "View portfolio",
   contactCta: "Open inquiry form",
   footerCaption:
-    "Japanphoto-lab · Free photo stock from Japan · Shoots & visual practice",
+    "Japanphoto-lab · Free photo & video stock from Japan · Shoots & visual practice",
   menuOpen: "Open menu",
   menuClose: "Close menu",
   mainNav: "Main",

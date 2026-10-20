@@ -23,9 +23,9 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Japanphoto-lab | Free photos of Japan & visual commissions",
+  title: "Japanphoto-lab | Free photos & videos of Japan & visual commissions",
   description:
-    "Free-to-use photos from location scouts and photo walks across Japan. Browse streets, temples, scenery, and outdoor scenes—or inquire about a custom shoot and brand visuals.",
+    "Free-to-use photos and videos from location scouts and photo walks across Japan. Browse streets, temples, scenery, and outdoor scenes—or inquire about a custom shoot and brand visuals.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
