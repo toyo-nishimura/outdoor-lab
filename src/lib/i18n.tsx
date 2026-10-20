@@ -21,9 +21,9 @@ const ja: Dict = {
   navInquiry: "撮影依頼・ご相談",
   headline: "自然の息吹を、そのまま手元に。",
   support1:
-    "ロケハンやフォトウォークで切り取った、日本各地の景色のフリー写真ストックです。",
+    "ロケハンやフォトウォークで切り取った、日本の風景の無料写真素材・フリー写真ストックです。",
   support2:
-    "記事・デザインにそのまま使えます。撮影やビジュアル制作のご相談も受け付けています。",
+    "記事・デザインにそのまま使えます（個人・商用可・利用条件あり）。撮影やビジュアル制作のご相談も受け付けています。",
   searchPlaceholder: "無料の写真・動画を検索",
   searchAria: "写真・動画を検索",
   searchSubmit: "検索",
@@ -31,7 +31,7 @@ const ja: Dict = {
   galleryHeading: "写真・動画一覧",
   gallerySubtext: "街・路地裏 · 寺社仏閣 · 風景・花 · アウトドア",
   galleryLead:
-    "カテゴリや検索で絞り込み、写真・動画を開いて利用条件を確認してからお使いください。",
+    "無料のストック写真・動画をカテゴリや検索で絞り込み、開いて利用条件を確認してからお使いください。",
   allFilter: "すべて",
   countSuffix: "点",
   emptyGallery:
@@ -54,9 +54,9 @@ const ja: Dict = {
   footerNav: "フッター",
   langToggle: "言語",
   termsTitle: "利用条件",
-  termsLead: "シンプルなライセンス",
+  termsLead: "無料のストック写真 — シンプルなライセンス",
   termsIntro:
-    "Japanphoto-lab の写真は、無料でダウンロードして利用できます。ロケハンやフォトウォークで切り取った景色のストックとして公開しています。",
+    "Japanphoto-lab は、日本の風景の無料ストック写真を公開しています。ロケハンやフォトウォークで切り取ったカットを、無料でダウンロードしてご利用いただけます。",
   termsCan: "できること",
   termsCan1:
     "Japanphoto-lab の写真は無料で利用できます。個人・商用を問わず、ダウンロードして使えます。",
@@ -114,11 +114,11 @@ const en: Dict = {
   navGallery: "Photos & videos",
   navTerms: "Terms of use",
   navInquiry: "Book a shoot",
-  headline: "Free photos of Japan—ready for your next story.",
+  headline: "Free Japanese landscape stock photos—ready for your next story.",
   support1:
-    "A free photo library from location scouts and photo walks across Japan: streets, temples, scenery, and outdoor moments.",
+    "Free stock photos of Japan from location scouts and photo walks: streets, temples, scenery, and outdoor moments.",
   support2:
-    "Use them in articles, websites, and design. Need a custom shoot or brand visuals? You can inquire here.",
+    "Use them in articles, websites, and design—personal or commercial, under our terms. Need a custom shoot or brand visuals? You can inquire here.",
   searchPlaceholder: "Search free photos & videos",
   searchAria: "Search photos & videos",
   searchSubmit: "Search",
@@ -126,7 +126,7 @@ const en: Dict = {
   galleryHeading: "Photos & videos",
   gallerySubtext: "Streets & alleys · Temples & shrines · Scenery & flowers · Outdoor",
   galleryLead:
-    "Filter by category or search, open a photo or video, check Terms of use, then view the full media.",
+    "Browse free stock photos and videos—filter by category or search, open a file, check Terms of use, then download or view.",
   allFilter: "All",
   countSuffix: "items",
   emptyGallery: "No photos or videos match. Try another search or category.",
@@ -148,9 +148,9 @@ const en: Dict = {
   footerNav: "Footer",
   langToggle: "Language",
   termsTitle: "Terms of use",
-  termsLead: "Free for personal and commercial use—with a few clear limits",
+  termsLead: "Free Japanese stock photos—personal and commercial use, with a few clear limits",
   termsIntro:
-    "Japanphoto-lab photos are free to download and use. They come from location scouts and photo walks, published here as a practical library for writing and design.",
+    "Japanphoto-lab publishes free Japanese landscape stock photos from location scouts and photo walks. Download and use them for writing and design—personal or commercial—under the terms below.",
   termsCan: "You may",
   termsCan1:
     "Download and use photos for free—personal or commercial projects.",

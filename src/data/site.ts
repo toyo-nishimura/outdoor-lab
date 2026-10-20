@@ -7,6 +7,8 @@ const inquiryFormUrl =
 
 export const site = {
   name: "Japanphoto-lab",
+  /** Canonical Firebase Hosting URL */
+  url: "https://outdoor-lab-japan.web.app",
   portfolioUrl: "https://takashi-portfolio.web.app/",
   /** 撮影依頼・ご相談 / お問い合わせ → Google Form only */
   inquiryFormUrl,
