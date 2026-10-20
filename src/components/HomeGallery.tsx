@@ -96,7 +96,7 @@ export function HomeGallery() {
         </Shell>
       </section>
 
-      <section className="border-t border-line bg-bg py-6">
+      <section className="border-t border-line bg-bg py-[35px]">
         <Shell>
           <div className="mb-[30px] flex items-end justify-between gap-4">
             <div>
