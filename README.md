@@ -23,8 +23,18 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
-npm run build   # production build
-npm run start   # serve production build
+npm run build   # static export → out/
+```
+
+## Deploy (Firebase Hosting)
+
+- Live: https://outdoor-lab-toyo.web.app
+- Project ID: `outdoor-lab-toyo`
+- Mode: classic Hosting + `output: 'export'` (not App Hosting)
+
+```bash
+npm run build
+npx firebase-tools@latest deploy --only hosting
 ```
 
 ## Design direction
