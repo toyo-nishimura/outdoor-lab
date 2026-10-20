@@ -77,6 +77,11 @@ const hannyajiLocation: LocalizedString = {
   en: "Hannya-ji, Nara",
 };
 
+const amagasakiLocation: LocalizedString = {
+  ja: "尼崎",
+  en: "Amagasaki",
+};
+
 /** Primary visible set — stills from walks / location shoots */
 export const photos: MediaItem[] = [
   {
@@ -986,6 +991,66 @@ export const photos: MediaItem[] = [
     location: hannyajiLocation,
     mediaType: "photo",
     src: "/photos/stock-img-0671.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-07e02cbf-c706-4e5b-9d06-45a9b00d1a60",
+    title: { ja: "競艇のレース", en: "Boat race" },
+    category: "アウトドア",
+    location: amagasakiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-07e02cbf-c706-4e5b-9d06-45a9b00d1a60.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2324,
+    height: 1535,
+  },
+  {
+    id: "stock-8751175f-4e1d-4028-8bdd-4e1e68a9dd4f",
+    title: { ja: "競艇の出走表", en: "Studying the race card" },
+    category: "街・路地裏",
+    location: amagasakiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-8751175f-4e1d-4028-8bdd-4e1e68a9dd4f.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2304,
+    height: 1536,
+  },
+  {
+    id: "stock-87a3353c-1a9e-4e01-935c-398f91cfcfc8",
+    title: { ja: "シャッター街", en: "Shuttered arcade" },
+    category: "街・路地裏",
+    location: amagasakiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-87a3353c-1a9e-4e01-935c-398f91cfcfc8.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2338,
+    height: 1537,
+  },
+  {
+    id: "stock-9da799d6-e4be-4a5a-9fe4-ba7542df718d",
+    title: { ja: "競艇場の水面", en: "Boats on the course" },
+    category: "アウトドア",
+    location: amagasakiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-9da799d6-e4be-4a5a-9fe4-ba7542df718d.jpg",
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 2390,
+    height: 1536,
+  },
+  {
+    id: "stock-bba2eed7-94e7-42fe-8acb-2583cd2320db",
+    title: { ja: "商店街のアーケード", en: "Shopping arcade" },
+    category: "街・路地裏",
+    location: amagasakiLocation,
+    mediaType: "photo",
+    src: "/photos/stock-bba2eed7-94e7-42fe-8acb-2583cd2320db.jpg",
     credit: "Japanphoto-lab",
     creditUrl: "/",
     width: 2304,
