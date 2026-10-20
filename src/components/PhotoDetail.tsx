@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useId, useState } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   categoryLabels,
@@ -17,6 +18,23 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
   const title = tLocal(photo.title, locale);
   const location = tLocal(photo.location, locale);
   const category = tLocal(categoryLabels[photo.category], locale);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const titleId = useId();
+  const isVideo = photo.mediaType === "video";
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightboxOpen]);
 
   return (
     <>
@@ -54,15 +72,15 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
           <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
             <div>
               <p className="text-sm font-medium tracking-wide text-sage">
-                {photo.mediaType === "video" ? t("videoBadge") : t("photoLabel")}{" "}
-                · {category} · {location}
+                {isVideo ? t("videoBadge") : t("photoLabel")} · {category} ·{" "}
+                {location}
               </p>
               <h1 className="font-display mt-2 text-3xl font-bold text-pine sm:text-4xl">
                 {title}
               </h1>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-moss">
                 {t("detailBody")}
-                {photo.mediaType === "video" ? t("detailBodyVideo") : null}
+                {isVideo ? t("detailBodyVideo") : null}
               </p>
               <p className="mt-3 text-sm text-sage">
                 {t("creditLabel")}
@@ -76,16 +94,24 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
             </div>
 
             <div className="flex flex-col gap-3 sm:min-w-52">
-              <a
-                href={getMediaOpenUrl(photo)}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
-              >
-                {photo.mediaType === "video"
-                  ? t("playExternal")
-                  : t("openMedia")}
-              </a>
+              {isVideo ? (
+                <a
+                  href={getMediaOpenUrl(photo)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
+                >
+                  {t("playExternal")}
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setLightboxOpen(true)}
+                  className="inline-flex items-center justify-center bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
+                >
+                  {t("openMedia")}
+                </button>
+              )}
               <Link
                 href="/terms"
                 className="inline-flex items-center justify-center border border-fog px-5 py-3 text-sm font-semibold text-pine transition hover:border-sage"
@@ -106,6 +132,54 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
         </div>
       </main>
       <SiteFooter />
+
+      {lightboxOpen && !isVideo ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 p-4 sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={titleId}
+          onClick={() => setLightboxOpen(false)}
+        >
+          <button
+            type="button"
+            className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-ink shadow-sm hover:bg-white sm:right-6 sm:top-6"
+            aria-label={t("closeMedia")}
+            onClick={() => setLightboxOpen(false)}
+          >
+            <CloseIcon />
+          </button>
+          <div
+            className="relative max-h-[min(92vh,1200px)] max-w-[min(96vw,1400px)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p id={titleId} className="sr-only">
+              {title}
+            </p>
+            {/* eslint-disable-next-line @next/next/no-img-element -- lightbox needs full asset, not optimized sizes */}
+            <img
+              src={photo.src}
+              alt={title}
+              width={photo.width}
+              height={photo.height}
+              className="max-h-[min(92vh,1200px)] w-auto max-w-full object-contain"
+            />
+          </div>
+        </div>
+      ) : null}
     </>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M6 6l12 12M18 6L6 18"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
   );
 }

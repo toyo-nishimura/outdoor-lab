@@ -76,7 +76,6 @@ export function SiteHeader() {
         </Link>
 
         <div className="hidden items-center gap-6 md:flex lg:gap-8">
-          <LanguageToggle />
           <nav
             className="flex items-center gap-[46px] text-[17px] font-medium text-ink"
             aria-label={t("mainNav")}
@@ -112,10 +111,10 @@ export function SiteHeader() {
               {t(ctaNav.labelKey)}
             </CtaLink>
           ) : null}
+          <LanguageToggle />
         </div>
 
         <div className="flex items-center gap-3 md:hidden">
-          <LanguageToggle />
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center text-ink"
@@ -125,6 +124,7 @@ export function SiteHeader() {
           >
             {open ? <CloseIcon /> : <MenuIcon />}
           </button>
+          <LanguageToggle />
         </div>
       </Shell>
 

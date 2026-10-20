@@ -91,6 +91,7 @@ const ja: Dict = {
   backToGrid: "グリッドへ戻る",
   backToGallery: "一覧に戻る",
   openMedia: "素材を開く",
+  closeMedia: "閉じる",
   playExternal: "外部で再生",
   photoLabel: "写真",
   detailBody:
@@ -174,6 +175,7 @@ const en: Dict = {
   backToGrid: "Back to grid",
   backToGallery: "Back to gallery",
   openMedia: "Open file",
+  closeMedia: "Close",
   playExternal: "Play externally",
   photoLabel: "Photo",
   detailBody:
