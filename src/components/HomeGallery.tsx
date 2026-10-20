@@ -7,6 +7,7 @@ import { Shell } from "@/components/Shell";
 import {
   categories,
   categoryLabels,
+  formatDuration,
   photos,
   tLocal,
   type PhotoCategory,
@@ -176,9 +177,13 @@ export function HomeGallery() {
                       sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
                       className="h-auto w-full object-cover"
                     />
-                    {photo.mediaType === "video" ? (
-                      <span className="pointer-events-none absolute left-2 top-2 rounded bg-ink/85 px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-white">
-                        {t("videoBadge")}
+                    {photo.mediaType === "video" &&
+                    typeof photo.durationSeconds === "number" ? (
+                      <span
+                        className="pointer-events-none absolute left-2 top-2 rounded-full bg-[#f0f0f0]/95 px-2 py-0.5 text-[11px] font-medium tabular-nums leading-none text-ink shadow-sm"
+                        aria-label={`${t("videoBadge")} ${formatDuration(photo.durationSeconds)}`}
+                      >
+                        {formatDuration(photo.durationSeconds)}
                       </span>
                     ) : null}
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-3 pb-3 pt-10 opacity-0 transition-opacity group-hover:opacity-100">

@@ -24,11 +24,21 @@ export type MediaItem = {
    * Omit for photos. Prefer YouTube/Vimeo/etc. links later.
    */
   externalUrl?: string;
+  /** Video length in seconds (for gallery duration badge). Photos omit. */
+  durationSeconds?: number;
   credit: string;
   creditUrl: string;
   width: number;
   height: number;
 };
+
+/** Format seconds as M:SS for gallery duration pills (e.g. 0:22). */
+export function formatDuration(seconds: number): string {
+  const total = Math.max(0, Math.round(seconds));
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${m}:${s.toString().padStart(2, "0")}`;
+}
 
 /** @deprecated Prefer MediaItem — kept for existing imports */
 export type Photo = MediaItem;
@@ -1055,6 +1065,22 @@ export const photos: MediaItem[] = [
     creditUrl: "/",
     width: 2304,
     height: 1536,
+  },
+  {
+    id: "stock-l1130356",
+    title: { ja: "枝のセミ", en: "Cicada on a branch" },
+    category: "風景・花",
+    location: { ja: "日本", en: "Japan" },
+    mediaType: "video",
+    src: "/photos/stock-l1130356-thumb.jpg",
+    externalUrl:
+      "https://drive.google.com/file/d/1tHQ5m2ZjOFM4TKT8xpKqynWcLzXZnHUJ/view?usp=sharing",
+    /** From mdls kMDItemDurationSeconds on L1130356.MOV (ffprobe unavailable) */
+    durationSeconds: 22.02166666666667,
+    credit: "Japanphoto-lab",
+    creditUrl: "/",
+    width: 3840,
+    height: 2160,
   },
 ];
 

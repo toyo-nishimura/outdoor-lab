@@ -96,7 +96,7 @@ const ja: Dict = {
   backToGallery: "写真・動画一覧へ戻る",
   openMedia: "素材を開く",
   closeMedia: "閉じる",
-  playExternal: "外部で再生",
+  playExternal: "動画を開く",
   photoLabel: "写真",
   locationLabel: "撮影地",
   detailBody:
@@ -189,7 +189,7 @@ const en: Dict = {
   backToGallery: "Back to gallery",
   openMedia: "View full photo",
   closeMedia: "Close",
-  playExternal: "Play externally",
+  playExternal: "Open video",
   photoLabel: "Photo",
   locationLabel: "Location",
   detailBody:
