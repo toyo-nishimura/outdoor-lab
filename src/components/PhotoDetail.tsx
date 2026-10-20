@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useState } from "react";
+import { LikeButton } from "@/components/LikeButton";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
@@ -57,12 +58,15 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
           <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
             <div>
               <p className="text-sm font-medium tracking-wide text-sage">
-                {isVideo ? t("videoBadge") : t("photoLabel")} · {category} ·{" "}
-                {location}
+                {isVideo ? t("videoBadge") : t("photoLabel")} · {category}
               </p>
               <h1 className="font-display mt-2 text-3xl font-bold text-pine sm:text-4xl">
                 {title}
               </h1>
+              <p className="mt-2 text-sm text-moss">
+                <span className="text-sage">{t("locationLabel")}: </span>
+                {location}
+              </p>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-moss">
                 {t("detailBody")}
                 {isVideo ? t("detailBodyVideo") : null}
@@ -97,6 +101,7 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
                   {t("openMedia")}
                 </button>
               )}
+              <LikeButton photoId={photo.id} variant="inline" />
               <Link
                 href="/terms"
                 className="inline-flex items-center justify-center border border-fog px-5 py-3 text-sm font-semibold text-pine transition hover:border-sage"
@@ -135,7 +140,7 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
             <CloseIcon />
           </button>
           <div
-            className="relative max-h-[min(92vh,1200px)] max-w-[min(96vw,1400px)]"
+            className="relative flex max-h-[min(92vh,1200px)] max-w-[min(96vw,1400px)] flex-col items-center gap-3"
             onClick={(e) => e.stopPropagation()}
           >
             <p id={titleId} className="sr-only">
@@ -147,8 +152,11 @@ export function PhotoDetail({ photo }: { photo: MediaItem }) {
               alt={title}
               width={photo.width}
               height={photo.height}
-              className="max-h-[min(92vh,1200px)] w-auto max-w-full object-contain"
+              className="max-h-[min(84vh,1100px)] w-auto max-w-full object-contain"
             />
+            <p className="max-w-md px-2 text-center text-[13px] leading-relaxed text-white/85">
+              {t("lightboxHint")}
+            </p>
           </div>
         </div>
       ) : null}

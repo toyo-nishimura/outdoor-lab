@@ -21,15 +21,17 @@ const ja: Dict = {
   navInquiry: "撮影依頼・ご相談",
   headline: "自然の息吹を、そのまま手元に。",
   support1:
-    "キャンプやアウトドアをはじめ、ロケハンやフォトウォークで切り取った景色のストック。",
+    "ロケハンやフォトウォークで切り取った、日本各地の景色のフリー写真ストックです。",
   support2:
-    "記事・デザイン制作にそのまま使えるフリー写真素材として公開しています。",
+    "記事・デザインにそのまま使えます。撮影やビジュアル制作のご相談も受け付けています。",
   searchPlaceholder: "無料の写真を検索",
   searchAria: "写真を検索",
   searchSubmit: "検索",
   photoChip: "写真",
   galleryHeading: "写真一覧",
   gallerySubtext: "街・路地裏 · 寺社仏閣 · 風景・花 · アウトドア",
+  galleryLead:
+    "カテゴリや検索で絞り込み、写真を開いて利用条件を確認してからお使いください。",
   allFilter: "すべて",
   countSuffix: "点",
   emptyGallery: "該当する写真がありません。検索語やカテゴリを変えてみてください。",
@@ -40,7 +42,7 @@ const ja: Dict = {
   inquiry2:
     "本業では、デザイナー／フォトグラファーとして、出張撮影やブランドビジュアルの制作、記事用カットの撮影などを承っています。現場の空気感やストーリーを大切に、イメージをデザインと一緒に組み上げます。",
   inquiry3:
-    "過去の実績や撮影のご相談は、ポートフォリオサイトよりお気軽にご覧ください。",
+    "過去の実績はポートフォリオでご覧ください。撮影・制作のご相談はお問い合わせフォームからどうぞ。",
   portfolioCta: "ポートフォリオを見る",
   contactCta: "お問い合わせ",
   footerCaption: "Japanphoto-lab · Photo Stock & Visual Practice / 撮影・デザイン",
@@ -94,95 +96,109 @@ const ja: Dict = {
   closeMedia: "閉じる",
   playExternal: "外部で再生",
   photoLabel: "写真",
+  locationLabel: "撮影地",
   detailBody:
-    "素材利用の目安は利用条件をご確認ください。業務委託・撮影案件の相談も歓迎です。",
+    "利用の範囲は「利用条件」をご確認ください。「素材を開く」で写真を大きく表示できます。撮影や制作のご相談も歓迎です。",
   detailBodyVideo:
     " 動画は外部ホストで公開し、ここでは埋め込み／リンクのみ想定しています。",
   creditLabel: "クレジット：",
+  lightboxHint:
+    "表示中の写真です。閉じるには ×・背景・Esc。利用条件もあわせてご確認ください。",
+  likeAria: "いいねする",
+  unlikeAria: "いいねを取り消す",
 };
 
 const en: Dict = {
   navGallery: "Photos",
-  navTerms: "Terms",
-  navInquiry: "Commission inquiry",
-  headline: "Bring the breath of nature to your work.",
+  navTerms: "Terms of use",
+  navInquiry: "Book a shoot",
+  headline: "Free photos of Japan—ready for your next story.",
   support1:
-    "A stock of scenes from camping, outdoor days, location scouts, and photo walks.",
+    "A free photo library from location scouts and photo walks across Japan: streets, temples, scenery, and outdoor moments.",
   support2:
-    "Published as free photos you can use straight in articles and design work.",
-  searchPlaceholder: "Search free photos",
+    "Use them in articles, websites, and design. Need a custom shoot or brand visuals? You can inquire here.",
+  searchPlaceholder: "Search free photos of Japan",
   searchAria: "Search photos",
   searchSubmit: "Search",
   photoChip: "Photos",
-  galleryHeading: "Photos",
+  galleryHeading: "Browse the library",
   gallerySubtext: "Streets & alleys · Temples & shrines · Scenery & flowers · Outdoor",
+  galleryLead:
+    "Filter by category or search, open a photo, check Terms of use, then view the full image.",
   allFilter: "All",
   countSuffix: "photos",
   emptyGallery: "No photos match. Try another search or category.",
   videoBadge: "Video",
-  inquiryHeading: "Commissions & visual production",
+  inquiryHeading: "Commission a shoot or visual project",
   inquiry1:
-    "Every photo on this site was made during location scouts and fieldwork.",
+    "Every still on Japanphoto-lab was photographed on location scouts and fieldwork—not stock-agency inventory.",
   inquiry2:
-    "As a designer / photographer, I take on location shoots, brand visuals, and editorial stills—building the mood and story together with design.",
+    "I work as a designer and photographer: location shoots, brand visuals, and editorial stills. We shape mood and story together with design.",
   inquiry3:
-    "See past work and reach out for shoots via the portfolio site.",
+    "Browse past work on the portfolio site, then send a commission inquiry via the form—no obligation, just a clear next step.",
   portfolioCta: "View portfolio",
-  contactCta: "Contact",
-  footerCaption: "Japanphoto-lab · Photo Stock & Visual Practice",
+  contactCta: "Open inquiry form",
+  footerCaption:
+    "Japanphoto-lab · Free photo stock from Japan · Shoots & visual practice",
   menuOpen: "Open menu",
   menuClose: "Close menu",
   mainNav: "Main",
   footerNav: "Footer",
   langToggle: "Language",
   termsTitle: "Terms of use",
-  termsLead: "A simple license",
+  termsLead: "Free for personal and commercial use—with a few clear limits",
   termsIntro:
-    "Japanphoto-lab photos are free to download and use. They are published as a stock of scenes from location scouts and photo walks.",
+    "Japanphoto-lab photos are free to download and use. They come from location scouts and photo walks, published here as a practical library for writing and design.",
   termsCan: "You may",
   termsCan1:
-    "Use Japanphoto-lab photos for free—personal or commercial—after download.",
+    "Download and use photos for free—personal or commercial projects.",
   termsCan2:
-    "Credit is not required (appreciated, but optional).",
+    "Skip credit if you prefer (a credit is appreciated, not required).",
   termsCan3:
-    "Edit photos freely—crop, color grade, and more.",
+    "Edit freely: crop, color, and other adjustments.",
   termsCannot: "You may not",
   termsCannot1:
     "Use photos in ways that harm or defame identifiable people.",
   termsCannot2:
-    "Sell an unaltered photo on its own as a poster, print, or physical product.",
+    "Sell an unaltered photo alone as a poster, print, or physical product.",
   termsCannot3:
-    "Imply that people or brands in an image endorse your product or service.",
+    "Imply that people or brands shown endorse your product or service.",
   termsCannot4:
-    "Redistribute or resell on other stock or wallpaper platforms.",
+    "Redistribute or resell files on other stock or wallpaper platforms.",
   termsCannot5:
     "Use photos as part of a trademark, design mark, trade name, or service mark.",
-  termsExamples: "Examples",
-  termsEx1: "Websites, blogs, apps, newsletters, presentations.",
+  termsExamples: "Common uses",
+  termsEx1: "Websites, blogs, apps, newsletters, and presentations.",
   termsEx2:
     "Flyers, invitations, magazines, book covers, and other promotional materials.",
-  termsUsage: "About using the photos",
+  termsUsage: "How free use works",
   termsUsageBody:
-    "All photos on this site are free to use (commercial or personal)—for web, social, print, video, and similar.",
-  termsCaution: "Please note",
+    "Photos on this site are free for commercial and personal use—on the web, social media, print, video, and similar formats.",
+  termsCaution: "Please note (shrines, buildings, trademarks)",
   termsCautionBody:
-    "Some photos may include shrines, temples, specific buildings, private property, trademarks, or signs. Depending on commercial use and medium, you may need permission from rights holders. Please judge and handle responsibly.",
+    "Some frames include shrines or temples, specific buildings, private property, registered trademarks, or signage. For certain commercial uses or media, you may need permission from rights holders or owners. Please assess and handle that yourself.",
   termsDisclaimer: "Disclaimer",
   termsDisclaimerBody:
-    "Photos may be removed without notice. We are not liable for any trouble, damage, or loss arising from use of these photos.",
-  termsInquiryHint: "For shoot or production inquiries, use Commission inquiry.",
-  termsInquiryCta: "Commission inquiry",
+    "Photos may be taken down without notice. Japanphoto-lab is not liable for disputes, damage, or loss arising from use of these photos.",
+  termsInquiryHint:
+    "For shoots or visual production, use Book a shoot in the header—or the inquiry form on the home page.",
+  termsInquiryCta: "Book a shoot",
   backToGrid: "Back to grid",
   backToGallery: "Back to gallery",
-  openMedia: "Open file",
+  openMedia: "View full photo",
   closeMedia: "Close",
   playExternal: "Play externally",
   photoLabel: "Photo",
+  locationLabel: "Location",
   detailBody:
-    "See Terms for usage. Commissions and shoot requests are welcome.",
+    "Check Terms of use before publishing. Open View full photo to see the image large. For a custom shoot or visual project, use Book a shoot.",
   detailBodyVideo:
     " Videos are hosted externally; this page only links or embeds.",
   creditLabel: "Credit: ",
+  lightboxHint:
+    "Full-size view. Close with ×, the backdrop, or Esc. See Terms of use for licensing.",
+  likeAria: "Like this photo",
+  unlikeAria: "Remove like",
 };
 
 const dictionaries: Record<Locale, Dict> = { ja, en };

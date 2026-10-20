@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { LikeButton } from "@/components/LikeButton";
 import { Shell } from "@/components/Shell";
 import {
   categories,
@@ -106,6 +107,9 @@ export function HomeGallery() {
               <p className="mt-1 text-[14px] text-muted-2">
                 {t("gallerySubtext")}
               </p>
+              <p className="mt-1 max-w-xl text-[13px] leading-relaxed text-muted">
+                {t("galleryLead")}
+              </p>
             </div>
             <p className="text-[14px] text-muted-2">
               {items.length} {t("countSuffix")}
@@ -161,32 +165,35 @@ export function HomeGallery() {
             <ul className="columns-2 gap-6 md:columns-3 xl:columns-4">
               {items.map((photo) => (
                 <li key={photo.id} className="mb-6 break-inside-avoid">
-                  <Link
-                    href={`/photos/${photo.id}`}
-                    className="group relative block overflow-hidden rounded-[8px] bg-chip"
-                  >
-                    <Image
-                      src={photo.src}
-                      alt={tLocal(photo.title, locale)}
-                      width={photo.width}
-                      height={photo.height}
-                      sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                      className="h-auto w-full object-cover"
-                    />
-                    {photo.mediaType === "video" ? (
-                      <span className="pointer-events-none absolute left-2 top-2 rounded bg-ink/85 px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-white">
-                        {t("videoBadge")}
-                      </span>
-                    ) : null}
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-3 pb-3 pt-10 opacity-0 transition-opacity group-hover:opacity-100">
-                      <p className="text-sm font-medium text-white">
-                        {tLocal(photo.title, locale)}
-                      </p>
-                      <p className="text-xs text-white/80">
-                        {tLocal(categoryLabels[photo.category], locale)}
-                      </p>
-                    </div>
-                  </Link>
+                  <div className="group relative">
+                    <Link
+                      href={`/photos/${photo.id}`}
+                      className="relative block overflow-hidden rounded-[8px] bg-chip"
+                    >
+                      <Image
+                        src={photo.src}
+                        alt={tLocal(photo.title, locale)}
+                        width={photo.width}
+                        height={photo.height}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        className="h-auto w-full object-cover"
+                      />
+                      {photo.mediaType === "video" ? (
+                        <span className="pointer-events-none absolute left-2 top-2 rounded bg-ink/85 px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-white">
+                          {t("videoBadge")}
+                        </span>
+                      ) : null}
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-3 pb-3 pt-10 opacity-0 transition-opacity group-hover:opacity-100">
+                        <p className="text-sm font-medium text-white">
+                          {tLocal(photo.title, locale)}
+                        </p>
+                        <p className="text-xs text-white/80">
+                          {tLocal(categoryLabels[photo.category], locale)}
+                        </p>
+                      </div>
+                    </Link>
+                    <LikeButton photoId={photo.id} variant="overlay" />
+                  </div>
                 </li>
               ))}
             </ul>
