@@ -536,9 +536,9 @@ export const photos: MediaItem[] = [
   },
   {
     id: "stock-186219a3-d399-41ea-9f6e-9e6bba761b39",
-    title: { ja: "桜の運河", en: "Cherry blossoms by the canal" },
+    title: { ja: "高瀬川", en: "Takasegawa" },
     category: "風景・花",
-    location: { ja: "京都", en: "Kyoto" },
+    location: { ja: "高瀬川（京都）", en: "Takasegawa, Kyoto" },
     mediaType: "photo",
     src: "/photos/stock-186219a3-d399-41ea-9f6e-9e6bba761b39.jpg",
     credit: "Japanphoto-lab",
