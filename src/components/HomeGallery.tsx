@@ -134,7 +134,7 @@ export function HomeGallery() {
       </section>
 
       {/* Masonry — gap 24; 2 → 3 → 4 cols; not full-bleed (inside Shell 1600) */}
-      <section id="gallery" className="scroll-mt-[80px] bg-bg py-2 sm:py-4">
+      <section id="gallery" className="scroll-mt-[80px] mb-[50px] bg-bg py-2 sm:py-4">
         <Shell>
           {items.length === 0 ? (
             <p className="py-16 text-center text-muted">
