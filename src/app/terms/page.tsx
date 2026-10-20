@@ -1,6 +1,7 @@
 import { Shell } from "@/components/Shell";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { site } from "@/data/site";
 
 export default function TermsPage() {
   return (
@@ -16,7 +17,7 @@ export default function TermsPage() {
 
             <p className="mt-8 text-base leading-relaxed text-moss sm:text-lg">
               outdoor-lab
-              の写真は、無料でダウンロードして利用できます。日本の風景をテーマにしたフリー写真素材として公開しています。
+              の写真は、無料でダウンロードして利用できます。ロケハンやフォトウォークで切り取った景色のストックとして公開しています。
             </p>
 
             <section className="mt-12">
@@ -109,7 +110,9 @@ export default function TermsPage() {
             </p>
 
             <a
-              href="/#contact"
+              href={site.inquiryFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex items-center justify-center rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
             >
               撮影依頼・ご相談へ

@@ -22,9 +22,9 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "outdoor-lab | 日本の風景",
+  title: "outdoor-lab | Photo Stock & Visual Practice",
   description:
-    "フォトウォークとロケで撮った日本の風景写真の素材棚。山・水辺・森・里のフリー写真と、撮影・制作の相談導線。",
+    "キャンプやアウトドアをはじめ、ロケハンやフォトウォークで切り取った景色のストック。記事・デザイン制作に使えるフリー写真と、撮影・ビジュアル制作の相談。",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

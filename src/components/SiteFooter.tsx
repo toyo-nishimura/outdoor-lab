@@ -14,15 +14,27 @@ export function SiteFooter() {
             aria-label="フッター"
             className="flex flex-wrap items-center gap-x-6 gap-y-2"
           >
-            {site.nav.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="leading-none text-muted hover:text-ink"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {site.nav.map((item) =>
+              item.external ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="leading-none text-muted hover:text-ink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="leading-none text-muted hover:text-ink"
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
         </div>
         <p className="text-muted-2 md:shrink-0 md:text-right">{site.tagline}</p>

@@ -14,10 +14,11 @@ import { site } from "@/data/site";
 type Filter = PhotoCategory | "すべて";
 
 const categoryThumbs: Record<PhotoCategory, string> = {
+  キャンプ: "/photos/camp-morning.jpg",
   山: "/photos/river-dawn.jpg",
   水辺: "/photos/sunset-bay.jpg",
   森: "/photos/river-mist.jpg",
-  里: "/photos/camp-morning.jpg",
+  街歩き: "/photos/sunset-bay.jpg",
 };
 
 export function HomeGallery() {
@@ -48,9 +49,11 @@ export function HomeGallery() {
             <h1 className="font-display text-[28px] font-bold leading-[1.3] tracking-tight text-ink sm:text-[34px] lg:text-[38px]">
               {site.headline}
             </h1>
-            <p className="mt-3 max-w-[40rem] text-[15px] leading-relaxed text-muted sm:text-[16px]">
-              {site.supportingLine}
-            </p>
+            <div className="mt-3 max-w-[40rem] space-y-1 text-[15px] leading-relaxed text-muted sm:text-[16px]">
+              {site.supportingLines.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
             {/* SearchInput_container: 72h, #f7f7f7, radius 12, pad 12 */}
             <form
               className="mt-[30px] flex h-[56px] items-center gap-2 rounded-[12px] bg-search p-3 sm:h-[72px]"
@@ -96,9 +99,14 @@ export function HomeGallery() {
       <section className="border-t border-line bg-bg py-6">
         <Shell>
           <div className="mb-4 flex items-end justify-between gap-4">
-            <h2 className="font-display text-[20px] font-semibold text-ink sm:text-[22px]">
-              {site.galleryHeading}
-            </h2>
+            <div>
+              <h2 className="font-display text-[20px] font-semibold text-ink sm:text-[22px]">
+                {site.galleryHeading}
+              </h2>
+              <p className="mt-1 text-[14px] text-muted-2">
+                {site.gallerySubtext}
+              </p>
+            </div>
             <p className="text-[14px] text-muted-2">{items.length} 点</p>
           </div>
           <div className="flex gap-[10px] overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

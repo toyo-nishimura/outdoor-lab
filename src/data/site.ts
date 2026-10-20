@@ -1,27 +1,29 @@
 /**
  * Site-wide copy & links.
- * `inquiryFormUrl` → Google Form public response URL.
+ * `inquiryFormUrl` → Google Form public response URL (all inquiry CTAs).
  */
 const inquiryFormUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSdtO-7gj37H0hRHemtrrgIOzKsXusCMdor4k0WVUaMQ6d1Sjg/viewform";
 
 export const site = {
   name: "outdoor-lab",
-  tagline: "日本の風景 · 撮影／デザイン／ライティング",
-  headline:
-    "日本の風景を、歩きながら撮って、そのまま使える素材棚。",
-  supportingLine:
-    "フォトウォークとロケで撮った風景を、記事・制作・案件用のフリー写真として公開しています。",
-  searchPlaceholder: "日本の風景を検索",
-  galleryHeading: "日本の風景",
+  tagline: "outdoor-lab · Photo Stock & Visual Practice / 撮影・デザイン",
+  headline: "自然の息吹を、そのまま手元に。",
+  supportingLines: [
+    "キャンプやアウトドアをはじめ、ロケハンやフォトウォークで切り取った景色のストック。",
+    "記事・デザイン制作にそのまま使えるフリー写真素材として公開しています。",
+  ],
+  searchPlaceholder: "無料の写真を検索",
+  galleryHeading: "写真一覧",
+  gallerySubtext: "キャンプ・山・水辺・森・街歩き",
   portfolioUrl: "https://takashi-portfolio.web.app/",
-  portfolioContactUrl: "https://takashi-portfolio.web.app/#contact",
-  /** 撮影依頼・ご相談 → Google Form */
+  /** 撮影依頼・ご相談 / お問い合わせ → Google Form only */
   inquiryFormUrl,
-  inquiryHeading: "写真撮影・ブランドビジュアル制作について",
+  inquiryHeading: "撮影のご依頼・ビジュアル制作について",
   inquiryBody: [
-    "当サイトの写真を撮影しているフォトグラファー／デザイナーが、風景ロケや出張撮影、記事用カット、ブランドのビジュアル制作などを承ります。歩きながら現場の空気感を大切に、イメージを一緒にかたちにします。",
-    "詳細や過去の実績・ポートフォリオは下記よりご覧ください。",
+    "当サイトに掲載している写真は、すべてロケハンやフィールドワークの合間に撮影したカットです。",
+    "本業では、デザイナー／フォトグラファーとして、出張撮影やブランドビジュアルの制作、記事用カットの撮影などを承っています。現場の空気感やストーリーを大切に、イメージをデザインと一緒に組み上げます。",
+    "過去の実績や撮影のご相談は、ポートフォリオサイトよりお気軽にご覧ください。",
   ],
   nav: [
     { href: "/#gallery", label: "写真一覧", external: false, cta: false },

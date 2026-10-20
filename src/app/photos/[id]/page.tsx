@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getMediaOpenUrl, getPhotoById, photos } from "@/data/photos";
+import { site } from "@/data/site";
 
 export function generateStaticParams() {
   return photos.map((photo) => ({ id: photo.id }));
@@ -87,7 +88,9 @@ export default async function PhotoDetailPage({
                 利用条件
               </Link>
               <a
-                href={`mailto:hello@outdoor-lab.example?subject=素材について：${photo.title}`}
+                href={site.inquiryFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border border-fog px-5 py-3 text-sm font-semibold text-moss transition hover:border-sage hover:text-pine"
               >
                 この素材について相談
