@@ -1,74 +1,122 @@
-import Link from "next/link";
+import { Shell } from "@/components/Shell";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 
 export default function TermsPage() {
   return (
     <>
-      <header className="border-b border-fog/80 px-5 py-5 sm:px-8">
-        <div className="mx-auto flex max-w-3xl items-center justify-between">
-          <Link
-            href="/"
-            className="font-display text-lg font-bold tracking-tight text-pine"
-          >
-            outdoor-lab
-          </Link>
-          <Link href="/#gallery" className="text-sm font-medium text-moss hover:text-pine">
-            素材へ
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
+      <main className="bg-paper py-12 sm:py-16">
+        <Shell>
+          <article className="mx-auto max-w-3xl">
+            <h1 className="font-display text-3xl font-bold tracking-tight text-pine sm:text-4xl">
+              利用条件
+            </h1>
+            <p className="mt-3 text-sm text-sage">シンプルなライセンス</p>
 
-      <main className="px-5 py-12 sm:px-8 sm:py-16">
-        <article className="mx-auto max-w-3xl">
-          <h1 className="font-display text-3xl font-bold tracking-tight text-pine sm:text-4xl">
-            利用条件（委託先向け・要約）
-          </h1>
-          <p className="mt-4 text-base leading-relaxed text-moss">
-            outdoor-lab はストック販売サイトではありません。撮影仕事の導線と、制作で困ったときの素材棚として公開しています。
-          </p>
+            <p className="mt-8 text-base leading-relaxed text-moss sm:text-lg">
+              outdoor-lab
+              の写真は、無料でダウンロードして利用できます。アウトドアに特化したフリー写真素材として公開しています。
+            </p>
 
-          <ol className="mt-10 space-y-6 text-base leading-relaxed text-ink">
-            <li>
-              <h2 className="font-display text-xl font-semibold text-pine">
-                1. 初期写真について
+            <section className="mt-12">
+              <h2 className="font-display text-2xl font-bold text-pine">
+                できること
               </h2>
-              <p className="mt-2 text-moss">
-                MVP掲載の写真は Unsplash / Pexels 等の無料素材プレースホルダです。本番運用前に、オリジナル撮影分へ差し替えます。クレジットは README と各詳細ページを参照してください。
-              </p>
-            </li>
-            <li>
-              <h2 className="font-display text-xl font-semibold text-pine">
-                2. 利用の目安
-              </h2>
-              <p className="mt-2 text-moss">
-                業務委託・共同制作の検討用として閲覧・仮置き利用を想定しています。商用最終納品での利用可否は、案件ごとに確認してください。
-              </p>
-            </li>
-            <li>
-              <h2 className="font-display text-xl font-semibold text-pine">
-                3. 撮影・記事の相談
-              </h2>
-              <p className="mt-2 text-moss">
-                アウトドア現場の撮影、記事用カット、ブランドビジュアルの相談はメールで受け付けます。要件・日程・用途を添えてください。
-              </p>
-            </li>
-            <li>
-              <h2 className="font-display text-xl font-semibold text-pine">
-                4. やらないこと（初版）
-              </h2>
-              <p className="mt-2 text-moss">
-                投稿者コミュニティ、無限ライブラリ運用、広告／紹介課金型のマーケットプレイスは対象外です。
-              </p>
-            </li>
-          </ol>
+              <ul className="mt-5 space-y-4 text-base leading-relaxed text-ink">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-pine" />
+                  <span>
+                    outdoor-lab
+                    の写真は無料で利用できます。個人・商用を問わず、ダウンロードして使えます。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-pine" />
+                  <span>
+                    クレジット（出典表示）は必須ではありません。表示していただけると嬉しいですが、任意です。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-pine" />
+                  <span>
+                    写真に変更を加えることができます。トリミングや色調整など、自由に編集してください。
+                  </span>
+                </li>
+              </ul>
+            </section>
 
-          <a
-            href="mailto:hello@outdoor-lab.example?subject=利用条件についての確認"
-            className="mt-12 inline-flex items-center justify-center bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
-          >
-            利用について問い合わせる
-          </a>
-        </article>
+            <section className="mt-12">
+              <h2 className="font-display text-2xl font-bold text-pine">
+                できないこと
+              </h2>
+              <ul className="mt-5 space-y-4 text-base leading-relaxed text-ink">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                  <span>
+                    特定可能な人物のイメージを損なったり、攻撃・誹謗中傷するような使い方はできません。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                  <span>
+                    変更を加えていない写真そのものを、ポスター・印刷物・物理製品などとして単独で販売することはできません。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                  <span>
+                    画像に登場する人物やブランドが、あなたの製品・サービスを推奨しているように見せないでください。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                  <span>
+                    他の写真素材サイトや壁紙プラットフォームなどで再配布・再販売しないでください。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                  <span>
+                    商標、デザインマーク、商号、サービスマークの一部として使用しないでください。
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            <section className="mt-12">
+              <h2 className="font-display text-2xl font-bold text-pine">
+                使い方の例
+              </h2>
+              <ul className="mt-5 space-y-4 text-base leading-relaxed text-moss">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sage" />
+                  <span>
+                    Webサイト、ブログ、アプリ、ニュースレター、プレゼン資料などでの利用。
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sage" />
+                  <span>
+                    チラシ、招待状、雑誌、書籍のカバーなど、製品・サービスの宣伝・制作物への利用。
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            <p className="mt-12 text-sm leading-relaxed text-sage">
+              掲載写真の一部はプレースホルダ（Unsplash
+              等）です。本番運用時はオリジナル撮影分へ差し替えます。撮影・制作のご相談はホームの「撮影依頼・ご相談」からどうぞ。
+            </p>
+
+            <a
+              href="/#contact"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-pine px-5 py-3 text-sm font-semibold text-white transition hover:bg-moss"
+            >
+              撮影依頼・ご相談へ
+            </a>
+          </article>
+        </Shell>
       </main>
       <SiteFooter />
     </>

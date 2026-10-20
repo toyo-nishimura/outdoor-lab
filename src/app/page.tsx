@@ -1,5 +1,5 @@
+import { HomeGallery } from "@/components/HomeGallery";
 import { Inquiry } from "@/components/Inquiry";
-import { PhotoGrid } from "@/components/PhotoGrid";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <main>
-        <PhotoGrid />
+        <HomeGallery />
         <Inquiry />
       </main>
       <SiteFooter />

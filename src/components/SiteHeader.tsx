@@ -1,16 +1,17 @@
 import Link from "next/link";
+import { Shell } from "@/components/Shell";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-30 border-b border-fog/80 bg-paper/95 backdrop-blur-sm">
-      <div className="flex items-center justify-between gap-4 px-4 py-2.5 sm:px-[30px]">
+    <header className="sticky top-0 z-30 border-b border-fog/70 bg-paper/95 backdrop-blur-sm">
+      <Shell className="flex h-[56px] items-center justify-between gap-6 sm:h-[64px]">
         <Link
           href="/"
-          className="font-display text-base font-bold tracking-tight text-pine sm:text-lg"
+          className="font-display text-[22px] font-bold leading-none tracking-tight text-pine"
         >
           outdoor-lab
         </Link>
-        <nav className="flex items-center gap-3 text-sm font-medium text-moss sm:gap-4">
+        <nav className="flex items-center gap-5 text-[15px] font-medium text-moss sm:gap-8 sm:text-[16px]">
           <Link href="/#gallery" className="hover:text-pine">
             写真一覧
           </Link>
@@ -21,7 +22,7 @@ export function SiteHeader() {
             撮影依頼・ご相談
           </Link>
         </nav>
-      </div>
+      </Shell>
     </header>
   );
 }

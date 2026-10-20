@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { Shell } from "@/components/Shell";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t border-fog/80 px-4 py-4 sm:px-[30px] sm:py-5">
-      <div className="flex flex-col gap-3 text-sm text-moss md:flex-row md:items-center md:justify-between md:gap-8">
+    <footer className="mt-auto border-t border-fog/80 bg-paper py-5 sm:py-6">
+      <Shell className="flex flex-col gap-3 text-sm text-moss md:flex-row md:items-center md:justify-between md:gap-8">
         <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-8">
           <p className="font-display text-base font-semibold leading-none text-pine">
             outdoor-lab
@@ -26,7 +27,7 @@ export function SiteFooter() {
         <p className="text-sage md:shrink-0 md:text-right">
           撮影／デザイン／ライティング
         </p>
-      </div>
+      </Shell>
     </footer>
   );
 }

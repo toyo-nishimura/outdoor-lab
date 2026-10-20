@@ -34,10 +34,8 @@
 }
 
 body {
-  /* Quieter paper ground so the masonry grid reads as the main visual */
-  background:
-    radial-gradient(100% 60% at 0% 0%, color-mix(in oklab, var(--fog) 35%, transparent), transparent 55%),
-    var(--paper);
+  /* Light grey / off-white ground — photos dominate (Pexels-like) */
+  background: var(--paper);
   color: var(--foreground);
   font-family: var(--font-archivo), var(--font-noto-sans-jp), "Hiragino Sans",
     "Noto Sans JP", system-ui, sans-serif;
